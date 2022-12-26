@@ -10,7 +10,7 @@
 
 #include "addressee.h"
 #include "kcontacts_export.h"
-#include "vcardparser/vcardparser.h"
+#include "vcardparser/vcardparser_p.h"
 
 class QDateTime;
 
@@ -68,11 +68,16 @@ private:
     Secrecy parseSecrecy(const VCardLine &line) const;
     VCardLine createSecrecy(const Secrecy &secrecy) const;
 
-    void addParameter(VCardLine &line, VCard::Version version, const QString &key, const QStringList &valueStringList) const;
-    void addParameters(VCardLine &line, const QMap<QString, QStringList> &params) const;
+    void addParameter(VCardLine *line, VCard::Version version, const QString &key, const QStringList &valueStringList) const;
 
     /** Translate alternative or legacy IMPP service types. */
     QString normalizeImppServiceType(const QString &serviceType) const;
+
+    void processAddresses(const Address::List &addresses, VCard::Version version, VCard *card) const;
+    void processEmailList(const Email::List &emailList, VCard::Version version, VCard *card) const;
+    void processOrganizations(const Addressee &addressee, VCard::Version version, VCard *card) const;
+    void processPhoneNumbers(const PhoneNumber::List &phoneNumbers, VCard::Version version, VCard *card) const;
+    void processCustoms(const QStringList &customs, VCard::Version version, VCard *card, bool exportVcard) const;
 
     Q_DISABLE_COPY(VCardTool)
 };

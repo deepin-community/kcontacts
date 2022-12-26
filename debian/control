@@ -2,17 +2,18 @@ Source: kcontacts
 Section: libs
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Uploaders: Norbert Preining <norbert@preining.info>,
+Uploaders: Aurélien COUDERC <coucouf@debian.org>,
+           Norbert Preining <norbert@preining.info>,
            Sandro Knauß <hefee@debian.org>,
 Build-Depends: cmake (>= 3.16~),
                debhelper-compat (= 13),
                doxygen,
-               extra-cmake-modules (>= 5.86.0~),
+               extra-cmake-modules (>= 5.90.0~),
                gettext,
-               libkf5codecs-dev (>= 5.86.0~),
-               libkf5config-dev (>= 5.86.0~),
-               libkf5coreaddons-dev (>= 5.86.0~),
-               libkf5i18n-dev (>= 5.86.0~),
+               libkf5codecs-dev (>= 5.90.0~),
+               libkf5config-dev (>= 5.90.0~),
+               libkf5coreaddons-dev (>= 5.90.0~),
+               libkf5i18n-dev (>= 5.90.0~),
                pkg-kde-tools (>> 0.15.15),
                qhelpgenerator-qt5,
                qtbase5-dev (>= 5.15.2~),
@@ -38,11 +39,11 @@ Package: libkf5contacts-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: libkf5codecs-dev (>= 5.86.0~),
-         libkf5config-dev (>= 5.86.0~),
+Depends: libkf5codecs-dev (>= 5.90.0~),
+         libkf5config-dev (>= 5.90.0~),
          libkf5contacts5 (= ${binary:Version}),
-         libkf5coreaddons-dev (>= 5.86.0~),
-         libkf5i18n-dev (>= 5.86.0~),
+         libkf5coreaddons-dev (>= 5.90.0~),
+         libkf5i18n-dev (>= 5.90.0~),
          qtbase5-dev (>= 5.15.2~),
          ${misc:Depends},
 Description: development files for kcontacts

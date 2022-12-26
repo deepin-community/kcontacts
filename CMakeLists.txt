@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.16)
 
-set(KF_VERSION "5.86.0") # handled by release scripts
-set(KF_DEP_VERSION "5.86.0") # handled by release scripts
+set(KF_VERSION "5.90.0") # handled by release scripts
+set(KF_DEP_VERSION "5.90.0") # handled by release scripts
 
 project(KContacts VERSION ${KF_VERSION})
 
 # ECM setup
 include(FeatureSummary)
-find_package(ECM 5.86.0 NO_MODULE)
+find_package(ECM 5.90.0 NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://commits.kde.org/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
@@ -21,13 +21,16 @@ include(KDECMakeSettings)
 include(KDEGitCommitHooks)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 
-include(GenerateExportHeader)
+include(ECMGenerateExportHeader)
 include(ECMGenerateHeaders)
 include(ECMGeneratePriFile)
+include(ECMGenerateExportHeader)
 
 include(ECMSetupVersion)
 include(ECMQtDeclareLoggingCategory)
 include(ECMAddQch)
+
+set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control the range of deprecated API excluded from the build [default=0].")
 
 option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
@@ -41,10 +44,11 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX KContacts
 )
 
 ########### Find packages ###########
-find_package(Qt5 ${REQUIRED_QT_VERSION} REQUIRED COMPONENTS Gui)
+find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} REQUIRED COMPONENTS Gui)
 find_package(KF5 ${KF_DEP_VERSION} REQUIRED COMPONENTS CoreAddons I18n Config Codecs)
-find_package(IsoCodes MODULE)
-set_package_properties("IsoCodes" PROPERTIES PURPOSE "Needed for country name translations." TYPE RUNTIME)
+if (QT_MAJOR_VERSION STREQUAL "6")
+    find_package(Qt6Core5Compat)
+endif()
 
 ########### Targets ###########
 
@@ -52,7 +56,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcontacts5\")
 ki18n_install(po)
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055100)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055900)
 
 add_subdirectory(src)
 
@@ -91,7 +95,7 @@ install(EXPORT KF5ContactsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE 
 
 install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/kcontacts_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF} COMPONENT Devel
 )
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

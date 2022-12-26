@@ -6,11 +6,10 @@
 */
 
 #include "address.h"
-#include "countrytoisomap_data.cpp"
-#include "isotocountrymap_data.cpp"
 
 #include "kcontacts_debug.h"
 #include <KConfig>
+#include <KCountry>
 #include <KLocalizedString>
 #include <krandom.h>
 
@@ -327,49 +326,38 @@ Address::Type Address::type() const
 QString Address::typeLabel(Type type)
 {
     QString label;
-    bool first = true;
     const TypeList list = typeList();
 
-    TypeList::ConstIterator it;
-    TypeList::ConstIterator end(list.end());
-    for (it = list.begin(); it != end; ++it) {
+    for (const auto typeFlag : list) {
         // these are actually flags
-        const TypeFlag flag = static_cast<TypeFlag>(static_cast<int>(*it));
+        const TypeFlag flag = static_cast<TypeFlag>(static_cast<int>(typeFlag));
         if (type & flag) {
-            if (!first) {
-                label.append(QLatin1Char('/'));
-            }
-
-            label.append(typeFlagLabel(flag));
-
-            if (first) {
-                first = false;
-            }
+            label.append(QLatin1Char('/') + typeFlagLabel(flag));
         }
     }
+
+    // Remove the first '/'
+    if (!label.isEmpty()) {
+        label.remove(0, 1);
+    }
+
     return label;
 }
 
 QString Address::typeLabel() const
 {
     QString label;
-    bool first = true;
-
     const TypeList list = typeList();
 
-    TypeList::ConstIterator it;
-    for (it = list.begin(); it != list.end(); ++it) {
-        if ((type() & (*it)) && ((*it) != Pref)) {
-            if (!first) {
-                label.append(QLatin1Char('/'));
-            }
-            label.append(typeLabel(*it));
-            if (first) {
-                first = false;
-            }
+    for (const auto f : list) {
+        if ((type() & f) && (f != Pref)) {
+            label.append(QLatin1Char('/') + typeLabel(f));
         }
     }
-
+    // Remove the first '/'
+    if (!label.isEmpty()) {
+        label.remove(0, 1);
+    }
     return label;
 }
 
@@ -564,16 +552,6 @@ QString Address::toString() const
     return str;
 }
 
-static QString countryCodeFromLocale()
-{
-    const auto n = QLocale().name(); // this is in the form <lang>_<COUNTRY>, with the exception of 'C'
-    const auto idx = n.indexOf(QLatin1Char('_'));
-    if (idx > 0) {
-        return n.mid(idx + 1).toLower();
-    }
-    return {};
-}
-
 static QString addressFormatRc()
 {
     Q_INIT_RESOURCE(kcontacts); // must be called outside of a namespace
@@ -582,20 +560,23 @@ static QString addressFormatRc()
 
 QString Address::formattedAddress(const QString &realName, const QString &orgaName) const
 {
-    QString ciso;
+    KCountry countryCode;
     QString addrTemplate;
     QString ret;
 
-    // FIXME: first check for iso-country-field and prefer that one
-    if (!country().isEmpty()) {
-        ciso = countryToISO(country());
-    } else {
-        // fall back to our own country
-        ciso = countryCodeFromLocale();
+    if (country().size() == 2) {
+        countryCode = KCountry::fromAlpha2(country());
+    }
+    if (!countryCode.isValid()) {
+        countryCode = KCountry::fromName(country());
+    }
+    // fall back to our own country
+    if (!countryCode.isValid()) {
+        countryCode = KCountry::fromQLocale(QLocale().country());
     }
     static const KConfig entry(addressFormatRc());
 
-    KConfigGroup group = entry.group(ciso);
+    KConfigGroup group = entry.group(countryCode.alpha2());
     // decide whether this needs special business address formatting
     if (orgaName.isEmpty()) {
         addrTemplate = group.readEntry("AddressFormat");
@@ -610,7 +591,7 @@ QString Address::formattedAddress(const QString &realName, const QString &orgaNa
     // used:
     if (addrTemplate.isEmpty()) {
         qCWarning(KCONTACTS_LOG) << "address format database incomplete"
-                                 << "(no format for locale" << ciso << "found). Using default address formatting.";
+                                 << "(no format for locale" << countryCode.alpha2() << "found). Using default address formatting.";
         addrTemplate = QStringLiteral("%0(%n\\n)%0(%cm\\n)%0(%s\\n)%0(PO BOX %p\\n)%0(%l%w%r)%,%z");
     }
 
@@ -620,74 +601,43 @@ QString Address::formattedAddress(const QString &realName, const QString &orgaNa
     // now add the country line if needed (formatting this time according to
     // the rules of our own system country )
     if (!country().isEmpty()) {
+        const QString countryName = countryCode.isValid() ? countryCode.name() : country();
+
         // Don't include line breaks if country is the only text
         if (ret.isEmpty()) {
-            return country().toUpper();
+            return countryName;
         }
 
-        KConfigGroup group = entry.group(countryCodeFromLocale());
+        KConfigGroup group = entry.group(KCountry::fromQLocale(QLocale().country()).alpha2());
         QString cpos = group.readEntry("AddressCountryPosition");
         if (QLatin1String("BELOW") == cpos || cpos.isEmpty()) {
-            ret = ret + QLatin1String("\n\n") + country().toUpper();
+            ret = ret + QLatin1String("\n\n") + countryName.toUpper();
         } else if (QLatin1String("below") == cpos) {
-            ret = ret + QLatin1String("\n\n") + country();
+            ret = ret + QLatin1String("\n\n") + countryName;
         } else if (QLatin1String("ABOVE") == cpos) {
-            ret = country().toUpper() + QLatin1String("\n\n") + ret;
+            ret = countryName.toUpper() + QLatin1String("\n\n") + ret;
         } else if (QLatin1String("above") == cpos) {
-            ret = country() + QLatin1String("\n\n") + ret;
+            ret = countryName + QLatin1String("\n\n") + ret;
         }
     }
 
     return ret;
 }
 
+#if KCONTACTS_BUILD_DEPRECATED_SINCE(5, 89)
 QString Address::countryToISO(const QString &cname)
 {
-    const auto lookupKey = normalizeCountryName(cname);
-
-    // look for an exact match
-    auto it =
-        std::lower_bound(std::begin(country_to_iso_index), std::end(country_to_iso_index), lookupKey, [](const CountryToIsoIndex &lhs, const QByteArray &rhs) {
-            return strcmp(country_name_stringtable + lhs.m_offset, rhs.constData()) < 0;
-        });
-    if (it != std::end(country_to_iso_index) && strcmp(country_name_stringtable + (*it).m_offset, lookupKey.constData()) == 0) {
-        return (*it).isoCode();
-    }
-
-    // a unique prefix will do too
-    it = std::lower_bound(std::begin(country_to_iso_index), std::end(country_to_iso_index), lookupKey, [](const CountryToIsoIndex &lhs, const QByteArray &rhs) {
-        return strncmp(country_name_stringtable + lhs.m_offset, rhs.constData(), strlen(country_name_stringtable + lhs.m_offset)) < 0;
-    });
-    const auto endIt =
-        std::upper_bound(std::begin(country_to_iso_index), std::end(country_to_iso_index), lookupKey, [](const QByteArray &lhs, const CountryToIsoIndex &rhs) {
-            return strncmp(lhs.constData(), country_name_stringtable + rhs.m_offset, strlen(country_name_stringtable + rhs.m_offset)) < 0;
-        });
-    if (it != std::end(country_to_iso_index) && endIt == (it + 1)
-        && strncmp(country_name_stringtable + (*it).m_offset, lookupKey.constData(), strlen(country_name_stringtable + (*it).m_offset)) == 0) {
-        return (*it).isoCode();
-    }
-
-    return {};
+    return KCountry::fromName(cname).alpha2().toLower();
 }
+#endif
 
+#if KCONTACTS_BUILD_DEPRECATED_SINCE(5, 89)
 QString Address::ISOtoCountry(const QString &ISOname)
 {
-    // get country name from ISO country code (e.g. "no" -> i18n("Norway"))
-    const auto iso = ISOname.simplified().toLower().toUtf8();
-    if (iso.size() != 2) {
-        return ISOname;
-    }
-
-    const auto it =
-        std::lower_bound(std::begin(iso_to_country_index), std::end(iso_to_country_index), iso.constData(), [](const IsoToCountryIndex &lhs, const char *rhs) {
-            return strncmp(&lhs.m_c1, rhs, 2) < 0;
-        });
-    if (it != std::end(iso_to_country_index) && strncmp(&(*it).m_c1, iso.constData(), 2) == 0) {
-        return i18nd("iso_3166-1", en_country_name_stringtable + (*it).m_offset);
-    }
-
-    return ISOname;
+    const auto c = KCountry::fromAlpha2(ISOname);
+    return c.isValid() ? c.name() : ISOname;
 }
+#endif
 
 // clang-format off
 QDataStream &KContacts::operator<<(QDataStream &s, const Address &addr)

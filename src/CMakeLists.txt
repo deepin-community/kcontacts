@@ -2,47 +2,82 @@ add_library(KF5Contacts)
 add_library(KF5::Contacts ALIAS KF5Contacts)
 
 target_sources(KF5Contacts PRIVATE
-  vcardparser/vcard.cpp
-  vcardparser/vcardline.cpp
-  vcardparser/vcardparser.cpp
+    address.cpp
+    addressee.cpp
+    addressee.h
+    addresseehelper.cpp
+    addresseehelper.h
+    addresseelist.h
+    address.h
+    calendarurl.cpp
+    calendarurl.h
+    clientpidmap.cpp
+    clientpidmap.h
+    contactgroup.cpp
+    contactgroup.h
+    contactgrouptool.cpp
+    contactgrouptool.h
+    converter/ldifconverter.cpp
+    converter/ldifconverter.h
+    converter/vcardconverter.cpp
+    converter/vcardconverter.h
+    email.cpp
+    email.h
+    field.cpp
+    fieldgroup.cpp
+    fieldgroup.h
+    field.h
+    gender.cpp
+    gender.h
+    geo.cpp
+    geo.h
+    impp.cpp
+    impp.h
+    key.cpp
+    key.h
+    lang.cpp
+    lang.h
+    ldif.cpp
+    ldif_p.h
+    nickname.cpp
+    nickname.h
+    note.cpp
+    note.h
+    org.cpp
+    org.h
+    parametermap_p.h
+    phonenumber.cpp
+    phonenumber.h
+    picture.cpp
+    picture.h
+    related.cpp
+    related.h
+    resourcelocatorurl.cpp
+    resourcelocatorurl.h
+    role.cpp
+    role.h
+    secrecy.cpp
+    secrecy.h
+    sound.cpp
+    sound.h
+    timezone.cpp
+    timezone.h
+    title.cpp
+    title.h
+    vcarddrag.cpp
+    vcarddrag.h
+    vcardparser/vcard.cpp
+    vcardparser/vcardline.cpp
+    vcardparser/vcardline_p.h
+    vcardparser/vcardparser.cpp
+    vcardparser/vcardparser_p.h
+    vcardparser/vcard_p.h
+    vcardtool.cpp
+    vcardtool_p.h
 
-  address.cpp
-  addressee.cpp
-  addresseehelper.cpp
-  calendarurl.cpp
-  contactgroup.cpp
-  contactgrouptool.cpp
-  countrytoisomap_p.cpp
-  email.cpp
-  field.cpp
-  geo.cpp
-  gender.cpp
-  impp.cpp
-  key.cpp
-  lang.cpp
-  ldif.cpp
-  phonenumber.cpp
-  picture.cpp
-  related.cpp
-  resourcelocatorurl.cpp
-  secrecy.cpp
-  sound.cpp
-  timezone.cpp
-  vcarddrag.cpp
-  vcardtool.cpp
-  fieldgroup.cpp
-  title.cpp
-  nickname.cpp
-  role.cpp
-  note.cpp
-  org.cpp
-  clientpidmap.cpp
 
   kcontacts.qrc
   improtocols/improtocols.qrc
-
-  converter/vcardconverter.cpp
-  converter/ldifconverter.cpp
 )
 
 ecm_qt_declare_logging_category(KF5Contacts
@@ -54,9 +89,17 @@ ecm_qt_declare_logging_category(KF5Contacts
     EXPORT KCONTACTS
 )
 
-generate_export_header(KF5Contacts BASE_NAME kcontacts)
+ecm_generate_export_header(KF5Contacts
+    EXPORT_FILE_NAME kcontacts_export.h
+    BASE_NAME kcontacts
+    GROUP_BASE_NAME KF
+    VERSION ${KF_VERSION}
+    DEPRECATED_BASE_VERSION 0
+    DEPRECATION_VERSIONS 5.88 5.89
+    EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
+)
 
-target_include_directories(KF5Contacts INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KContacts>")
+target_include_directories(KF5Contacts INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KContacts>")
 set(KContacts_BUILD_INCLUDE_DIRS
     ${KContacts_SOURCE_DIR}/src
     ${KContacts_BINARY_DIR}/src
@@ -66,14 +109,19 @@ target_include_directories(KF5Contacts PUBLIC "$<BUILD_INTERFACE:${KContacts_BUI
 
 target_link_libraries(KF5Contacts
 PUBLIC
-    Qt5::Core
-    Qt5::Gui
+    Qt${QT_MAJOR_VERSION}::Core
+    Qt${QT_MAJOR_VERSION}::Gui
 PRIVATE
     KF5::CoreAddons
     KF5::ConfigCore
     KF5::I18n
+    KF5::I18nLocaleData
     KF5::Codecs # for the vcard parser
 )
+
+if (TARGET Qt6::Core5Compat)
+    target_link_libraries(KF5Contacts PRIVATE Qt6::Core5Compat) # QTextCodec
+endif()
 
 set_target_properties(KF5Contacts PROPERTIES
     VERSION ${KContacts_VERSION}
@@ -118,18 +166,17 @@ ecm_generate_headers(KContacts_CamelCase_HEADERS
 )
 
 add_subdirectory(converter)
-add_subdirectory(generator)
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/kcontacts_export.h
     ${KContacts_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KContacts/kcontacts
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KContacts/kcontacts
     COMPONENT Devel
 )
 
 install(FILES
     ${KContacts_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KContacts/KContacts
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KContacts/KContacts
     COMPONENT Devel
 )
 
@@ -139,7 +186,7 @@ ecm_qt_install_logging_categories(
     DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
 )
 
-ecm_generate_pri_file(BASE_NAME KContacts LIB_NAME KF5Contacts DEPS "KCoreAddons" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KContacts)
+ecm_generate_pri_file(BASE_NAME KContacts LIB_NAME KF5Contacts DEPS "KCoreAddons" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KContacts)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 if(BUILD_QCH)
@@ -159,6 +206,10 @@ if(BUILD_QCH)
             ${KContacts_BUILD_INCLUDE_DIRS}
         BLANK_MACROS
             KCONTACTS_EXPORT
+            "KCONTACTS_DEPRECATED_VERSION(x, y, t)"
+            "KCONTACTS_DEPRECATED_VERSION_BELATED(x, y, xt, yt, t)"
+            "KCONTACTS_ENUMERATOR_DEPRECATED_VERSION(x, y, t)"
+            "KCONTACTS_ENUMERATOR_DEPRECATED_VERSION_BELATED(x, y, xt, yt, t)"
         TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel

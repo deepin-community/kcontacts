@@ -5,7 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "vcard.h"
+#include "vcard_p.h"
 
 using namespace KContacts;
 
@@ -14,8 +14,8 @@ VCard::VCard()
 }
 
 VCard::VCard(const VCard &vcard)
+    : mLineMap(vcard.mLineMap)
 {
-    mLineMap = vcard.mLineMap;
 }
 
 VCard::~VCard()
@@ -40,44 +40,45 @@ void VCard::clear()
 
 QStringList VCard::identifiers() const
 {
-    return mLineMap.keys();
+    QStringList list;
+    list.reserve(mLineMap.size());
+    for (const auto &[lineId, l] : mLineMap) {
+        list.append(lineId);
+    }
+    return list;
 }
 
 void VCard::addLine(const VCardLine &line)
 {
-    mLineMap[line.identifier()].append(line);
+    auto it = findByLineId(line.identifier());
+    if (it != mLineMap.end()) {
+        it->list.append(line);
+    } else {
+        const LineData newdata{line.identifier(), {line}};
+        auto beforeIt = std::lower_bound(mLineMap.begin(), mLineMap.end(), newdata);
+        mLineMap.insert(beforeIt, newdata);
+    }
 }
 
 VCardLine::List VCard::lines(const QString &identifier) const
 {
-    LineMap::ConstIterator it = mLineMap.find(identifier);
-    if (it == mLineMap.end()) {
-        return VCardLine::List();
-    }
-
-    return *it;
+    auto it = findByLineId(identifier);
+    return it != mLineMap.cend() ? it->list : VCardLine::List{};
 }
 
 VCardLine VCard::line(const QString &identifier) const
 {
-    LineMap::ConstIterator it = mLineMap.find(identifier);
-    if (it == mLineMap.end()) {
-        return VCardLine();
-    }
-
-    if ((*it).isEmpty()) {
-        return VCardLine();
-    } else {
-        return (*it).first();
-    }
+    auto it = findByLineId(identifier);
+    return it != mLineMap.cend() && !it->list.isEmpty() ? it->list.at(0) : VCardLine{};
 }
+
+static const char s_verStr[] = "VERSION";
 
 void VCard::setVersion(Version version)
 {
-    mLineMap.remove(QStringLiteral("VERSION"));
 
     VCardLine line;
-    line.setIdentifier(QStringLiteral("VERSION"));
+    line.setIdentifier(QLatin1String(s_verStr));
     if (version == v2_1) {
         line.setIdentifier(QStringLiteral("2.1"));
     } else if (version == v3_0) {
@@ -86,22 +87,30 @@ void VCard::setVersion(Version version)
         line.setIdentifier(QStringLiteral("4.0"));
     }
 
-    mLineMap[QStringLiteral("VERSION")].append(line);
+    auto it = findByLineId(QLatin1String(s_verStr));
+    if (it != mLineMap.end()) {
+        it->list.append(line);
+    } else {
+        const LineData newData{QLatin1String(s_verStr), {line}};
+        auto beforeIt = std::lower_bound(mLineMap.begin(), mLineMap.end(), newData);
+        mLineMap.insert(beforeIt, newData);
+    }
 }
 
 VCard::Version VCard::version() const
 {
-    LineMap::ConstIterator versionEntry = mLineMap.find(QStringLiteral("VERSION"));
-    if (versionEntry == mLineMap.end()) {
+    auto versionEntryIt = findByLineId(QLatin1String(s_verStr));
+    if (versionEntryIt == mLineMap.cend()) {
         return v3_0;
     }
 
-    VCardLine line = (*versionEntry)[0];
+    const VCardLine line = versionEntryIt->list.at(0);
     if (line.value() == QLatin1String("2.1")) {
         return v2_1;
-    } else if (line.value() == QLatin1String("3.0")) {
-        return v3_0;
-    } else {
-        return v4_0;
     }
+    if (line.value() == QLatin1String("3.0")) {
+        return v3_0;
+    }
+
+    return v4_0;
 }

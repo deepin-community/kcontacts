@@ -26,10 +26,14 @@
 
 #include "ldif_p.h"
 
+#include <KCountry>
 #include <KLocalizedString>
 
+#include <QIODevice>
 #include <QStringList>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <QTextCodec>
+#endif
 #include <QTextStream>
 
 using namespace KContacts;
@@ -90,7 +94,10 @@ bool LDIFConverter::contactGroupToLDIF(const ContactGroup &contactGroup, QString
         return false;
     }
     QTextStream t(&str, QIODevice::WriteOnly | QIODevice::Append);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     t.setCodec(QTextCodec::codecForName("UTF-8"));
+#endif
+
     t << "objectclass: top\n";
     t << "objectclass: groupOfNames\n";
 
@@ -106,32 +113,34 @@ bool LDIFConverter::contactGroupToLDIF(const ContactGroup &contactGroup, QString
 
 bool LDIFConverter::contactGroupToLDIF(const ContactGroup::List &contactGroupList, QString &str)
 {
-    if (contactGroupList.count() <= 0) {
+    if (contactGroupList.isEmpty()) {
         return false;
     }
 
     bool result = true;
-    ContactGroup::List::ConstIterator it;
-    const ContactGroup::List::ConstIterator end(contactGroupList.constEnd());
-    for (it = contactGroupList.constBegin(); it != end; ++it) {
-        result = (contactGroupToLDIF(*it, str) || result); // order matters
+    for (const ContactGroup &group : contactGroupList) {
+        result = (contactGroupToLDIF(group, str) || result); // order matters
     }
     return result;
 }
 
 bool LDIFConverter::addresseeToLDIF(const AddresseeList &addrList, QString &str)
 {
-    if (addrList.count() <= 0) {
+    if (addrList.isEmpty()) {
         return false;
     }
 
     bool result = true;
-    AddresseeList::ConstIterator it;
-    const AddresseeList::ConstIterator end(addrList.constEnd());
-    for (it = addrList.constBegin(); it != end; ++it) {
-        result = (addresseeToLDIF(*it, str) || result); // order matters
+    for (const Addressee &addr : addrList) {
+        result = (addresseeToLDIF(addr, str) || result); // order matters
     }
     return result;
+}
+
+static QString countryName(const QString &isoCodeOrName)
+{
+    const auto c = KCountry::fromAlpha2(isoCodeOrName);
+    return c.isValid() ? c.name() : isoCodeOrName;
 }
 
 bool LDIFConverter::addresseeToLDIF(const Addressee &addr, QString &str)
@@ -141,7 +150,9 @@ bool LDIFConverter::addresseeToLDIF(const Addressee &addr, QString &str)
     }
 
     QTextStream t(&str, QIODevice::WriteOnly | QIODevice::Append);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     t.setCodec(QTextCodec::codecForName("UTF-8"));
+#endif
 
     const Address homeAddr = addr.address(Address::Home);
     const Address workAddr = addr.address(Address::Work);
@@ -198,7 +209,7 @@ bool LDIFConverter::addresseeToLDIF(const Addressee &addr, QString &str)
     ldif_out(t, QStringLiteral("mozillahomelocalityname"), homeAddr.locality()); // Netscape 7
     ldif_out(t, QStringLiteral("mozillahomestate"), homeAddr.region());
     ldif_out(t, QStringLiteral("mozillahomepostalcode"), homeAddr.postalCode());
-    ldif_out(t, QStringLiteral("mozillahomecountryname"), Address::ISOtoCountry(homeAddr.country()));
+    ldif_out(t, QStringLiteral("mozillahomecountryname"), countryName(homeAddr.country()));
     ldif_out(t, QStringLiteral("locality"), workAddr.locality());
     ldif_out(t, QStringLiteral("streetaddress"), workAddr.street()); // Netscape 4.x
 
@@ -210,9 +221,9 @@ bool LDIFConverter::addresseeToLDIF(const Addressee &addr, QString &str)
     if (streetsCount > 1) {
         ldif_out(t, QStringLiteral("mozillaworkstreet2"), streets.at(1));
     }
-    ldif_out(t, QStringLiteral("countryname"), Address::ISOtoCountry(workAddr.country()));
+    ldif_out(t, QStringLiteral("countryname"), countryName(workAddr.country()));
     ldif_out(t, QStringLiteral("l"), workAddr.locality());
-    ldif_out(t, QStringLiteral("c"), Address::ISOtoCountry(workAddr.country()));
+    ldif_out(t, QStringLiteral("c"), countryName(workAddr.country()));
     ldif_out(t, QStringLiteral("st"), workAddr.region());
 
     ldif_out(t, QStringLiteral("title"), addr.title());
@@ -381,7 +392,7 @@ void KContacts::evaluatePair(Addressee &a,
         || fieldname == QLatin1String("mozillasecondemail") /* mozilla */
         || fieldname == QLatin1String("othermailbox") /*TheBat!*/) {
         if (a.emails().indexOf(value) == -1) {
-            a.insertEmail(value);
+            a.addEmail(value);
         }
         return;
     }
@@ -526,7 +537,7 @@ void KContacts::evaluatePair(Addressee &a,
 
     if (fieldname == QLatin1String("mozillahomecountryname")) { // mozilla
         if (value.length() <= 2) {
-            value = Address::ISOtoCountry(value);
+            value = countryName(value);
         }
         homeAddr.setCountry(value);
         return;
@@ -545,7 +556,7 @@ void KContacts::evaluatePair(Addressee &a,
     if (fieldname == QLatin1String("countryname") //
         || fieldname == QLatin1Char('c')) { // mozilla
         if (value.length() <= 2) {
-            value = Address::ISOtoCountry(value);
+            value = countryName(value);
         }
         workAddr.setCountry(value);
         return;
@@ -577,16 +588,16 @@ void KContacts::evaluatePair(Addressee &a,
         QString name;
         QString email;
 
-        QStringList::ConstIterator it;
-        const QStringList::ConstIterator end(list.constEnd());
-        for (it = list.constBegin(); it != end; ++it) {
-            if ((*it).startsWith(QLatin1String("cn="))) {
-                name = (*it).mid(3).trimmed();
-            }
-            if ((*it).startsWith(QLatin1String("mail="))) {
-                email = (*it).mid(5).trimmed();
+        const QLatin1String cnTag("cn=");
+        const QLatin1String mailTag("mail=");
+        for (const auto &str : list) {
+            if (str.startsWith(cnTag)) {
+                name = QStringView(str).mid(cnTag.size()).trimmed().toString();
+            } else if (str.startsWith(mailTag)) {
+                email = QStringView(str).mid(mailTag.size()).trimmed().toString();
             }
         }
+
         if (!name.isEmpty() && !email.isEmpty()) {
             email = QLatin1String(" <") + email + QLatin1Char('>');
         }
@@ -634,7 +645,12 @@ void KContacts::evaluatePair(Addressee &a,
         return;
     }
     if (fieldname == QLatin1String("xbatbirthday")) {
-        QDate dt = QDate::fromString(value, QStringLiteral("yyyyMMdd"));
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+        const QStringView str{value};
+#else
+        const QStringRef str{&value};
+#endif
+        QDate dt(str.mid(0, 4).toInt(), str.mid(4, 2).toInt(), str.mid(6, 2).toInt());
         if (dt.isValid()) {
             a.setBirthday(dt);
         }

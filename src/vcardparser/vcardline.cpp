@@ -5,7 +5,9 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "vcardline.h"
+#include "vcardline_p.h"
+
+#include "parametermap_p.h"
 
 using namespace KContacts;
 
@@ -14,22 +16,22 @@ VCardLine::VCardLine()
 }
 
 VCardLine::VCardLine(const QString &identifier)
+    : VCardLine(identifier, {})
 {
-    mIdentifier = identifier;
 }
 
 VCardLine::VCardLine(const QString &identifier, const QVariant &value)
+    : mIdentifier(identifier)
+    , mValue(value)
 {
-    mIdentifier = identifier;
-    mValue = value;
 }
 
 VCardLine::VCardLine(const VCardLine &line)
+    : mParamMap(line.mParamMap)
+    , mIdentifier(line.mIdentifier)
+    , mGroup(line.mGroup)
+    , mValue(line.mValue)
 {
-    mParamMap = line.mParamMap;
-    mValue = line.mValue;
-    mIdentifier = line.mIdentifier;
-    mGroup = line.mGroup;
 }
 
 VCardLine::~VCardLine()
@@ -97,42 +99,47 @@ bool VCardLine::hasGroup() const
 
 QStringList VCardLine::parameterList() const
 {
-    return mParamMap.keys();
+    QStringList list;
+    list.reserve(mParamMap.size());
+    for (const auto &[param, values] : mParamMap) {
+        list.append(param);
+    }
+
+    return list;
+}
+
+void VCardLine::addParameters(const ParameterMap &params)
+{
+    for (const auto &[param, list] : params) {
+        addParameter(param, list.join(QLatin1Char(',')));
+    }
 }
 
 void VCardLine::addParameter(const QString &param, const QString &value)
 {
-    QStringList &list = mParamMap[param];
-    if (!list.contains(value)) { // not included yet
-        list.append(value);
+    auto it = mParamMap.findParam(param);
+    if (it != mParamMap.end()) {
+        if (!it->paramValues.contains(value)) { // not included yet
+            it->paramValues.push_back(value);
+        }
+    } else {
+        mParamMap.insertParam({param, QStringList{value}});
     }
 }
 
 QStringList VCardLine::parameters(const QString &param) const
 {
-    ParamMap::ConstIterator it = mParamMap.find(param);
-    if (it == mParamMap.end()) {
-        return QStringList();
-    } else {
-        return *it;
-    }
+    auto it = mParamMap.findParam(param);
+    return it != mParamMap.cend() ? it->paramValues : QStringList{};
 }
 
 QString VCardLine::parameter(const QString &param) const
 {
-    ParamMap::ConstIterator it = mParamMap.find(param);
-    if (it == mParamMap.end()) {
-        return QString();
-    } else {
-        if ((*it).isEmpty()) {
-            return QString();
-        } else {
-            return (*it).first();
-        }
-    }
+    auto it = mParamMap.findParam(param);
+    return it != mParamMap.cend() && !it->paramValues.isEmpty() ? it->paramValues.at(0) : QString{};
 }
 
-VCardLine::ParamMap VCardLine::parameterMap() const
+ParameterMap VCardLine::parameterMap() const
 {
     return mParamMap;
 }
