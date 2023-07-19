@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kabc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-24 00:14+0000\n"
+"POT-Creation-Date: 2022-02-27 00:41+0000\n"
 "PO-Revision-Date: 2016-01-14 17:41+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@linux.ee>\n"
@@ -17,88 +17,88 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: address.cpp:377
+#: address.cpp:223
 #, kde-format
 msgid "Post Office Box"
 msgstr "Postkast"
 
-#: address.cpp:393
+#: address.cpp:239
 #, kde-format
 msgid "Extended Address Information"
 msgstr "Laiendatud aadressiteave"
 
-#: address.cpp:409
+#: address.cpp:255
 #, kde-format
 msgid "Street"
 msgstr "Tänav"
 
-#: address.cpp:425
+#: address.cpp:271
 #, kde-format
 msgid "Locality"
 msgstr "Asula"
 
-#: address.cpp:441
+#: address.cpp:287
 #, kde-format
 msgid "Region"
 msgstr "Piirkond"
 
-#: address.cpp:457
+#: address.cpp:303
 #, kde-format
 msgid "Postal Code"
 msgstr "Postiindeks"
 
-#: address.cpp:473
+#: address.cpp:319
 #, kde-format
 msgid "Country"
 msgstr "Riik"
 
-#: address.cpp:489
+#: address.cpp:335
 #, kde-format
 msgid "Delivery Label"
 msgstr "Posti etikett"
 
-#: address.cpp:507
+#: address.cpp:353
 #, kde-format
 msgctxt "Address is in home country"
 msgid "Domestic"
 msgstr "Kodumaine"
 
-#: address.cpp:509
+#: address.cpp:355
 #, kde-format
 msgctxt "Address is not in home country"
 msgid "International"
 msgstr "Rahvusvaheline"
 
-#: address.cpp:511
+#: address.cpp:357
 #, kde-format
 msgctxt "Address for delivering letters"
 msgid "Postal"
 msgstr "Postiindeks"
 
-#: address.cpp:513
+#: address.cpp:359
 #, kde-format
 msgctxt "Address for delivering packages"
 msgid "Parcel"
 msgstr "Postipakk"
 
-#: address.cpp:515
+#: address.cpp:361
 #, kde-format
 msgctxt "Home Address"
 msgid "Home"
 msgstr "Kodu"
 
-#: address.cpp:517
+#: address.cpp:363
 #, kde-format
 msgctxt "Work Address"
 msgid "Work"
 msgstr "Töö"
 
-#: address.cpp:519
+#: address.cpp:365
 #, kde-format
 msgid "Preferred Address"
 msgstr "Eelistatud aadress"
 
-#: address.cpp:521
+#: address.cpp:367
 #, kde-format
 msgctxt "another type of address"
 msgid "Other"
@@ -582,3 +582,159 @@ msgstr "Konfidentsiaalne"
 msgctxt "unknown secrecy type"
 msgid "Unknown type"
 msgstr "Tundmatu tüüp"
+
+#~ msgctxt "Preferred address"
+#~ msgid "Preferred"
+#~ msgstr "Eelistatud"
+
+#~ msgid "List of Emails"
+#~ msgstr "E-kirjade nimekiri"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Marek Laane"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "bald@smail.ee"
+
+#~ msgid "Unable to load resource '%1'"
+#~ msgstr "Ressursi '%1' laadimine nurjus"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Addressee"
+#~ msgstr "Adressaadi valik"
+
+#~ msgctxt "@title:column addressee name"
+#~ msgid "Name"
+#~ msgstr "Nimi"
+
+#~ msgctxt "@title:column addressee email"
+#~ msgid "Email"
+#~ msgstr "E-post"
+
+#~ msgctxt "@title:group selected addressees"
+#~ msgid "Selected"
+#~ msgstr "Valitud"
+
+#~ msgctxt "@action:button unselect addressee"
+#~ msgid "Unselect"
+#~ msgstr "Tühista valik"
+
+#~ msgid "Configure Distribution Lists"
+#~ msgstr "Postiloendite seadistamine"
+
+#~ msgid "Select Email Address"
+#~ msgstr "Vali e-posti aadress"
+
+#~ msgid "Email Addresses"
+#~ msgstr "E-posti aadressid"
+
+#~ msgctxt "this the preferred email address"
+#~ msgid "Yes"
+#~ msgstr "Jah"
+
+#~ msgctxt "this is not the preferred email address"
+#~ msgid "No"
+#~ msgstr "Ei"
+
+#~ msgid "New List..."
+#~ msgstr "Uus loend..."
+
+#~ msgid "Rename List..."
+#~ msgstr "Nimeta loend ümber..."
+
+#~ msgid "Remove List"
+#~ msgstr "Eemalda loend"
+
+#~ msgid "Available addresses:"
+#~ msgstr "Saadaolevad aadressid:"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Preferred Email"
+#~ msgstr "Eelistatud e-posti aadress"
+
+#~ msgid "Add Entry"
+#~ msgstr "Lisa kirje"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Email"
+#~ msgstr "E-post"
+
+#~ msgctxt "@title:column use preferred email"
+#~ msgid "Use Preferred"
+#~ msgstr "Eelistatud kirje"
+
+#~ msgid "Change Email..."
+#~ msgstr "Muuda e-posti aadressi..."
+
+#~ msgid "Remove Entry"
+#~ msgstr "Eemalda kirje"
+
+#~ msgid "New Distribution List"
+#~ msgstr "Uus postiloend"
+
+#~ msgid "Please enter &name:"
+#~ msgstr "Palun sisesta &nimi:"
+
+#~ msgid "Distribution List"
+#~ msgstr "Postiloend"
+
+#~ msgid "Please change &name:"
+#~ msgstr "Palun muuda &nime:"
+
+#~ msgid "Delete distribution list '%1'?"
+#~ msgstr "Kas kustutada postiloend '%1'?"
+
+#~ msgid "Selected addressees:"
+#~ msgstr "Valitud adressaadid:"
+
+#~ msgid "Selected addresses in '%1':"
+#~ msgstr "Valitud adressaadid nimekirjas '%1':"
+
+#~ msgctxt "this is not preferred email address"
+#~ msgid "No"
+#~ msgstr "Ei"
+
+#~ msgid "vCard"
+#~ msgstr "vCard"
+
+#~ msgid "vCard Format"
+#~ msgstr "vCardi vorming"
+
+#~ msgid "No description available."
+#~ msgstr "Kirjeldus puudub."
+
+#~ msgid "Unable to open lock file."
+#~ msgstr "Lukufaili pole võimalik avada."
+
+#~ msgid "The resource '%1' is locked by application '%2'."
+#~ msgstr "Ressursi '%1' on lukustanud rakendus '%2'."
+
+#~ msgid "Error"
+#~ msgstr "Viga"
+
+#~ msgid "Unlock failed. Lock file is owned by other process: %1 (%2)"
+#~ msgstr "Luku avamine nurjus. Lukufail kuulub muule protsessile: %1 (%2)"
+
+#~ msgid "LockNull: All locks succeed but no actual locking is done."
+#~ msgstr ""
+#~ "LockNull: kõik lukustused õnnestusid, aga tegelikult midagi ei lukustatud."
+
+#~ msgid "LockNull: All locks fail."
+#~ msgstr "LockNull: kõik lukustused nurjusid."
+
+#~ msgid "Loading resource '%1' failed."
+#~ msgstr "Ressursi '%1' laadimine nurjus."
+
+#~ msgid "Saving resource '%1' failed."
+#~ msgstr "Ressursi '%1' salvestamine nurjus."
+
+#~ msgid "Unable to open resource '%1'."
+#~ msgstr "Ressursi '%1' avamine nurjus."
+
+#~ msgid "Default Address Book"
+#~ msgstr "Vaikimisi aadressiraamat"
+
+#~ msgid "Unable to save to resource '%1'. It is locked."
+#~ msgstr "Ressursi '%1' salvestamine nurjus, sest ressurss on lukus."

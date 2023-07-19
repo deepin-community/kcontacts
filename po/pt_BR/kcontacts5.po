@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontacts5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-24 00:14+0000\n"
+"POT-Creation-Date: 2022-02-27 00:41+0000\n"
 "PO-Revision-Date: 2021-02-17 14:20-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -19,88 +19,88 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: address.cpp:377
+#: address.cpp:223
 #, kde-format
 msgid "Post Office Box"
 msgstr "Caixa postal"
 
-#: address.cpp:393
+#: address.cpp:239
 #, kde-format
 msgid "Extended Address Information"
 msgstr "Informação estendida do endereço"
 
-#: address.cpp:409
+#: address.cpp:255
 #, kde-format
 msgid "Street"
 msgstr "Rua"
 
-#: address.cpp:425
+#: address.cpp:271
 #, kde-format
 msgid "Locality"
 msgstr "Localidade"
 
-#: address.cpp:441
+#: address.cpp:287
 #, kde-format
 msgid "Region"
 msgstr "Região"
 
-#: address.cpp:457
+#: address.cpp:303
 #, kde-format
 msgid "Postal Code"
 msgstr "CEP"
 
-#: address.cpp:473
+#: address.cpp:319
 #, kde-format
 msgid "Country"
 msgstr "País"
 
-#: address.cpp:489
+#: address.cpp:335
 #, kde-format
 msgid "Delivery Label"
 msgstr "Etiqueta de entrega"
 
-#: address.cpp:507
+#: address.cpp:353
 #, kde-format
 msgctxt "Address is in home country"
 msgid "Domestic"
 msgstr "Nacional"
 
-#: address.cpp:509
+#: address.cpp:355
 #, kde-format
 msgctxt "Address is not in home country"
 msgid "International"
 msgstr "Internacional"
 
-#: address.cpp:511
+#: address.cpp:357
 #, kde-format
 msgctxt "Address for delivering letters"
 msgid "Postal"
 msgstr "Postal"
 
-#: address.cpp:513
+#: address.cpp:359
 #, kde-format
 msgctxt "Address for delivering packages"
 msgid "Parcel"
 msgstr "Encomenda"
 
-#: address.cpp:515
+#: address.cpp:361
 #, kde-format
 msgctxt "Home Address"
 msgid "Home"
 msgstr "Residencial"
 
-#: address.cpp:517
+#: address.cpp:363
 #, kde-format
 msgctxt "Work Address"
 msgid "Work"
 msgstr "Comercial"
 
-#: address.cpp:519
+#: address.cpp:365
 #, kde-format
 msgid "Preferred Address"
 msgstr "Endereço preferido"
 
-#: address.cpp:521
+#: address.cpp:367
 #, kde-format
 msgctxt "another type of address"
 msgid "Other"
@@ -585,3 +585,7 @@ msgstr "Confidencial"
 msgctxt "unknown secrecy type"
 msgid "Unknown type"
 msgstr "Tipo desconhecido"
+
+#~ msgctxt "Preferred address"
+#~ msgid "Preferred"
+#~ msgstr "Preferido"

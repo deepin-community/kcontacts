@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-24 00:14+0000\n"
+"POT-Creation-Date: 2022-02-27 00:41+0000\n"
 "PO-Revision-Date: 2021-03-24 11:00-0400\n"
 "Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
 "Language-Team: kdeshqip\n"
@@ -20,88 +20,88 @@ msgstr ""
 "X-Generator: Lokalize 20.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: address.cpp:377
+#: address.cpp:223
 #, kde-format
 msgid "Post Office Box"
 msgstr "Kuti Zyre Postale"
 
-#: address.cpp:393
+#: address.cpp:239
 #, kde-format
 msgid "Extended Address Information"
 msgstr "Informacion i Zgjeruar i Adresës"
 
-#: address.cpp:409
+#: address.cpp:255
 #, kde-format
 msgid "Street"
 msgstr "Rruga"
 
-#: address.cpp:425
+#: address.cpp:271
 #, kde-format
 msgid "Locality"
 msgstr "Lokaliteti"
 
-#: address.cpp:441
+#: address.cpp:287
 #, kde-format
 msgid "Region"
 msgstr "Rajoni"
 
-#: address.cpp:457
+#: address.cpp:303
 #, kde-format
 msgid "Postal Code"
 msgstr "Kodi Postal"
 
-#: address.cpp:473
+#: address.cpp:319
 #, kde-format
 msgid "Country"
 msgstr "Vendi"
 
-#: address.cpp:489
+#: address.cpp:335
 #, kde-format
 msgid "Delivery Label"
 msgstr "Kodi i Shpërndarjes"
 
-#: address.cpp:507
+#: address.cpp:353
 #, kde-format
 msgctxt "Address is in home country"
 msgid "Domestic"
 msgstr "Vendas"
 
-#: address.cpp:509
+#: address.cpp:355
 #, kde-format
 msgctxt "Address is not in home country"
 msgid "International"
 msgstr "Ndërkombëtar"
 
-#: address.cpp:511
+#: address.cpp:357
 #, kde-format
 msgctxt "Address for delivering letters"
 msgid "Postal"
 msgstr "Postal"
 
-#: address.cpp:513
+#: address.cpp:359
 #, kde-format
 msgctxt "Address for delivering packages"
 msgid "Parcel"
 msgstr "Dëftesa"
 
-#: address.cpp:515
+#: address.cpp:361
 #, kde-format
 msgctxt "Home Address"
 msgid "Home"
 msgstr "Shtëpia"
 
-#: address.cpp:517
+#: address.cpp:363
 #, kde-format
 msgctxt "Work Address"
 msgid "Work"
 msgstr "Puna"
 
-#: address.cpp:519
+#: address.cpp:365
 #, kde-format
 msgid "Preferred Address"
 msgstr "Adresa e Preferuar"
 
-#: address.cpp:521
+#: address.cpp:367
 #, kde-format
 msgctxt "another type of address"
 msgid "Other"
@@ -585,3 +585,162 @@ msgstr "Në konfidencë"
 msgctxt "unknown secrecy type"
 msgid "Unknown type"
 msgstr "Lloj i panjohur"
+
+#~ msgctxt "Preferred address"
+#~ msgid "Preferred"
+#~ msgstr "I Preferuar"
+
+#~ msgid "List of Emails"
+#~ msgstr "Lista e email-eve"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "KDE Shqip, Launchpad Contributions: Vilson Gjeci"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde-shqip@yahoogroups.com,vilsongjeci@gmail.com"
+
+#~ msgid "Unable to load resource '%1'"
+#~ msgstr "Nuk qemë në gjendje të ngarkojmë resursin '%1'"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Addressee"
+#~ msgstr "Zgjidhni të Adresuarin"
+
+#~ msgctxt "@title:column addressee name"
+#~ msgid "Name"
+#~ msgstr "Emri"
+
+#~ msgctxt "@title:column addressee email"
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgctxt "@title:group selected addressees"
+#~ msgid "Selected"
+#~ msgstr "I zgjedhur"
+
+#~ msgctxt "@action:button unselect addressee"
+#~ msgid "Unselect"
+#~ msgstr "Hiqe Përzgjedhjen"
+
+#~ msgid "Configure Distribution Lists"
+#~ msgstr "Konfiguro Listat Shpërndarëse"
+
+#~ msgid "Select Email Address"
+#~ msgstr "Zgjidh Adresën Email"
+
+#~ msgid "Email Addresses"
+#~ msgstr "Adresat Email"
+
+#~ msgctxt "this the preferred email address"
+#~ msgid "Yes"
+#~ msgstr "Po"
+
+#~ msgctxt "this is not the preferred email address"
+#~ msgid "No"
+#~ msgstr "Jo"
+
+#~ msgid "New List..."
+#~ msgstr "Listë E Re..."
+
+#~ msgid "Rename List..."
+#~ msgstr "Riemërto Listën..."
+
+#~ msgid "Remove List"
+#~ msgstr "Hiqe Listën"
+
+#~ msgid "Available addresses:"
+#~ msgstr "Adresat e Disponueshme:"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Preferred Email"
+#~ msgstr "Email i Preferuar"
+
+#~ msgid "Add Entry"
+#~ msgstr "Shto Hyrje"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgctxt "@title:column use preferred email"
+#~ msgid "Use Preferred"
+#~ msgstr "Përdor të Preferuarat"
+
+#~ msgid "Change Email..."
+#~ msgstr "Ndrysho Email..."
+
+#~ msgid "Remove Entry"
+#~ msgstr "Hiqe Hyrjen"
+
+#~ msgid "New Distribution List"
+#~ msgstr "Listë e Re Distribucioni"
+
+#~ msgid "Please enter &name:"
+#~ msgstr "Ju lutemi vendosni një &emër:"
+
+#~ msgid "Distribution List"
+#~ msgstr "Lista e Distribucioneve"
+
+#~ msgid "Please change &name:"
+#~ msgstr "Ju lutemi ndryshoni &emrin:"
+
+#~ msgid "Delete distribution list '%1'?"
+#~ msgstr "Ta fshij listën e distribucionit '%1'?"
+
+#~ msgid "Selected addressees:"
+#~ msgstr "Adresat e përzgjedhura:"
+
+#~ msgid "Selected addresses in '%1':"
+#~ msgstr "Adresat e përzgjedhura në '%1':"
+
+#~ msgctxt "this is not preferred email address"
+#~ msgid "No"
+#~ msgstr "Jo"
+
+#~ msgid "vCard"
+#~ msgstr "vCard"
+
+#~ msgid "vCard Format"
+#~ msgstr "vCard Format"
+
+#~ msgid "No description available."
+#~ msgstr "Asnjë përshkrim në dispozicion."
+
+#~ msgid "Unable to open lock file."
+#~ msgstr "Nuk mundëm të hapim skedarin e bllokuar."
+
+#~ msgid "The resource '%1' is locked by application '%2'."
+#~ msgstr "Resursi '%1' është bllokuar nga programi '%2'."
+
+#~ msgid "Error"
+#~ msgstr "Gabim"
+
+#~ msgid "Unlock failed. Lock file is owned by other process: %1 (%2)"
+#~ msgstr ""
+#~ "Zhbllokimi dështoi. Skedari i bllokuar po përdoret nga një proçes tjetër: "
+#~ "%1 (%2)"
+
+#~ msgid "LockNull: All locks succeed but no actual locking is done."
+#~ msgstr ""
+#~ "LockNull: Të gjitha bllokimet ndodhën pro nuk u krye asnjë bllokim aktual."
+
+#~ msgid "LockNull: All locks fail."
+#~ msgstr "LockNull: Të gjitha bllokimet dështuan."
+
+#~ msgid "Loading resource '%1' failed."
+#~ msgstr "Ngarkimi i resursit '%1' dështoi."
+
+#~ msgid "Saving resource '%1' failed."
+#~ msgstr "Ruajtja e resursit '%1' dështoi."
+
+#~ msgid "Unable to open resource '%1'."
+#~ msgstr "Nuk jemi në gjendje të hapim burimin '%1'."
+
+#~ msgid "Default Address Book"
+#~ msgstr "Libri i Parazgjedhur i Adresave"
+
+#~ msgid "Unable to save to resource '%1'. It is locked."
+#~ msgstr ""
+#~ "Nuk qemë në gjendje të regjistrojmë në resursin '%1'. Është i bllokuar."

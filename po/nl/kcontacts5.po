@@ -5,104 +5,104 @@
 # Bram Schoenmakers <bramschoenmakers@kde.nl>, 2007.
 # Antoon Tolboom <atolboo@casema.nl>, 2008.
 # Kristof Bal <kristof.bal@gmail.com>, 2009.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2015.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2015, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kabc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-24 00:14+0000\n"
-"PO-Revision-Date: 2015-12-25 14:31+0100\n"
+"POT-Creation-Date: 2022-02-27 00:41+0000\n"
+"PO-Revision-Date: 2022-06-24 10:23+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 22.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: address.cpp:377
+#: address.cpp:223
 #, kde-format
 msgid "Post Office Box"
 msgstr "Postbus"
 
-#: address.cpp:393
+#: address.cpp:239
 #, kde-format
 msgid "Extended Address Information"
 msgstr "Uitgebreide adresinformatie"
 
-#: address.cpp:409
+#: address.cpp:255
 #, kde-format
 msgid "Street"
 msgstr "Straat"
 
-#: address.cpp:425
+#: address.cpp:271
 #, kde-format
 msgid "Locality"
 msgstr "Plaats"
 
-#: address.cpp:441
+#: address.cpp:287
 #, kde-format
 msgid "Region"
 msgstr "Regio"
 
-#: address.cpp:457
+#: address.cpp:303
 #, kde-format
 msgid "Postal Code"
 msgstr "Postcode"
 
-#: address.cpp:473
+#: address.cpp:319
 #, kde-format
 msgid "Country"
 msgstr "Land"
 
-#: address.cpp:489
+#: address.cpp:335
 #, kde-format
 msgid "Delivery Label"
 msgstr "Bezorglabel"
 
-#: address.cpp:507
+#: address.cpp:353
 #, kde-format
 msgctxt "Address is in home country"
 msgid "Domestic"
 msgstr "Binnenlands"
 
-#: address.cpp:509
+#: address.cpp:355
 #, kde-format
 msgctxt "Address is not in home country"
 msgid "International"
 msgstr "Internationaal"
 
-#: address.cpp:511
+#: address.cpp:357
 #, kde-format
 msgctxt "Address for delivering letters"
 msgid "Postal"
 msgstr "Postadres"
 
-#: address.cpp:513
+#: address.cpp:359
 #, kde-format
 msgctxt "Address for delivering packages"
 msgid "Parcel"
 msgstr "Perceel"
 
-#: address.cpp:515
+#: address.cpp:361
 #, kde-format
 msgctxt "Home Address"
 msgid "Home"
 msgstr "Thuis"
 
-#: address.cpp:517
+#: address.cpp:363
 #, kde-format
 msgctxt "Work Address"
 msgid "Work"
 msgstr "Werk"
 
-#: address.cpp:519
+#: address.cpp:365
 #, kde-format
 msgid "Preferred Address"
 msgstr "Voorkeuradres"
 
-#: address.cpp:521
+#: address.cpp:367
 #, kde-format
 msgctxt "another type of address"
 msgid "Other"
@@ -146,7 +146,7 @@ msgstr "Titel voorvoegsel"
 #: addressee.cpp:772
 #, kde-format
 msgid "Honorific Suffixes"
-msgstr "Titel achtervoegsel"
+msgstr "Titel-achtervoegsels"
 
 #: addressee.cpp:823
 #, kde-format
@@ -586,3 +586,163 @@ msgstr "Vertrouwelijk"
 msgctxt "unknown secrecy type"
 msgid "Unknown type"
 msgstr "Onbekend type"
+
+#~ msgctxt "Preferred address"
+#~ msgid "Preferred"
+#~ msgstr "Voorkeur"
+
+#~ msgid "List of Emails"
+#~ msgstr "Lijst met e-mailberichten"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Bram Schoenmakers,Antoon Tolboom"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "bramschoenmakers@kde.nl,atolboo@casema.nl"
+
+#~ msgid "Unable to load resource '%1'"
+#~ msgstr "De hulpbron '%1' kon niet worden geladen"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Addressee"
+#~ msgstr "Geadresseerde selecteren"
+
+#~ msgctxt "@title:column addressee name"
+#~ msgid "Name"
+#~ msgstr "Naam"
+
+#~ msgctxt "@title:column addressee email"
+#~ msgid "Email"
+#~ msgstr "E-mail"
+
+#~ msgctxt "@title:group selected addressees"
+#~ msgid "Selected"
+#~ msgstr "Geselecteerd"
+
+#~ msgctxt "@action:button unselect addressee"
+#~ msgid "Unselect"
+#~ msgstr "Deselecteren"
+
+#~ msgid "Configure Distribution Lists"
+#~ msgstr "Distributielijsten instellen"
+
+#~ msgid "Select Email Address"
+#~ msgstr "E-mailadressen selecteren"
+
+#~ msgid "Email Addresses"
+#~ msgstr "E-mailadressen"
+
+#~ msgctxt "this the preferred email address"
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgctxt "this is not the preferred email address"
+#~ msgid "No"
+#~ msgstr "Nee"
+
+#~ msgid "New List..."
+#~ msgstr "Nieuwe lijst..."
+
+#~ msgid "Rename List..."
+#~ msgstr "Lijst hernoemen..."
+
+#~ msgid "Remove List"
+#~ msgstr "Lijst verwijderen"
+
+#~ msgid "Available addresses:"
+#~ msgstr "Beschikbare adressen:"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Preferred Email"
+#~ msgstr "Voorkeur e-mail"
+
+#~ msgid "Add Entry"
+#~ msgstr "Item toevoegen"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Email"
+#~ msgstr "E-mail"
+
+#~ msgctxt "@title:column use preferred email"
+#~ msgid "Use Preferred"
+#~ msgstr "Voorkeur gebruiken"
+
+#~ msgid "Change Email..."
+#~ msgstr "E-mail wijzigen..."
+
+#~ msgid "Remove Entry"
+#~ msgstr "Ingang verwijderen"
+
+#~ msgid "New Distribution List"
+#~ msgstr "Nieuwe distributielijst"
+
+#~ msgid "Please enter &name:"
+#~ msgstr "Voer een &naam in:"
+
+#~ msgid "Distribution List"
+#~ msgstr "Distributielijst"
+
+#~ msgid "Please change &name:"
+#~ msgstr "Wijzig de &naam:"
+
+#~ msgid "Delete distribution list '%1'?"
+#~ msgstr "Distributielijst '%1' verwijderen?"
+
+#~ msgid "Selected addressees:"
+#~ msgstr "Geselecteerde adressen:"
+
+#~ msgid "Selected addresses in '%1':"
+#~ msgstr "Geselecteerde adressen in '%1':"
+
+#~ msgctxt "this is not preferred email address"
+#~ msgid "No"
+#~ msgstr "Nee"
+
+#~ msgid "vCard"
+#~ msgstr "vCard"
+
+#~ msgid "vCard Format"
+#~ msgstr "vCard-opmaak"
+
+#~ msgid "No description available."
+#~ msgstr "Geen beschrijving beschikbaar."
+
+#~ msgid "Unable to open lock file."
+#~ msgstr "Lock-bestand kon niet worden geopend."
+
+#~ msgid "The resource '%1' is locked by application '%2'."
+#~ msgstr "De hulpbron '%1' is vergrendeld door toepassing '%2'."
+
+#~ msgid "Error"
+#~ msgstr "Fout"
+
+#~ msgid "Unlock failed. Lock file is owned by other process: %1 (%2)"
+#~ msgstr ""
+#~ "Het ontgrendelen is niet gelukt. Het Lock-bestand is eigendom van een "
+#~ "ander proces: %1 (%2)"
+
+#~ msgid "LockNull: All locks succeed but no actual locking is done."
+#~ msgstr ""
+#~ "LockNull: Alle vergrendelingen zijn gelukt, maar vonden niet werkelijk "
+#~ "plaats."
+
+#~ msgid "LockNull: All locks fail."
+#~ msgstr "LockNull: Alle vergrendelingen mislukken."
+
+#~ msgid "Loading resource '%1' failed."
+#~ msgstr "Laden van hulpbron '%1' is mislukt."
+
+#~ msgid "Saving resource '%1' failed."
+#~ msgstr "Het opslaan van hulpbron '%1' is mislukt."
+
+#~ msgid "Unable to open resource '%1'."
+#~ msgstr "De hulpbron '%1' kon niet worden geopend."
+
+#~ msgid "Default Address Book"
+#~ msgstr "Standaard adresboek"
+
+#~ msgid "Unable to save to resource '%1'. It is locked."
+#~ msgstr ""
+#~ "Er kon niet worden opgeslagen naar hulpbron '%1'. Deze is vergrendeld."

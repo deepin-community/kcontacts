@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kabc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-24 00:14+0000\n"
+"POT-Creation-Date: 2022-02-27 00:41+0000\n"
 "PO-Revision-Date: 2007-05-30 17:58+0300\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
@@ -16,94 +16,95 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
 
-#: address.cpp:377
+#: address.cpp:223
 #, kde-format
 msgid "Post Office Box"
 msgstr "Абанентавая скрыня"
 
-#: address.cpp:393
+#: address.cpp:239
 #, kde-format
 msgid "Extended Address Information"
 msgstr "Пашыраная інфармацыя аб адрасе"
 
-#: address.cpp:409
+#: address.cpp:255
 #, kde-format
 msgid "Street"
 msgstr "Вуліца"
 
-#: address.cpp:425
+#: address.cpp:271
 #, kde-format
 msgid "Locality"
 msgstr "Раён"
 
-#: address.cpp:441
+#: address.cpp:287
 #, kde-format
 msgid "Region"
 msgstr "Рэгіён"
 
-#: address.cpp:457
+#: address.cpp:303
 #, kde-format
 msgid "Postal Code"
 msgstr "Паштовы індэкс"
 
-#: address.cpp:473
+#: address.cpp:319
 #, kde-format
 msgid "Country"
 msgstr "Краіна"
 
-#: address.cpp:489
+#: address.cpp:335
 #, kde-format
 msgid "Delivery Label"
 msgstr ""
 
-#: address.cpp:507
+#: address.cpp:353
 #, fuzzy, kde-format
 #| msgid "Domestic"
 msgctxt "Address is in home country"
 msgid "Domestic"
 msgstr "Унутраны"
 
-#: address.cpp:509
+#: address.cpp:355
 #, fuzzy, kde-format
 #| msgid "International"
 msgctxt "Address is not in home country"
 msgid "International"
 msgstr "Міжнародны"
 
-#: address.cpp:511
+#: address.cpp:357
 #, fuzzy, kde-format
 #| msgid "Postal"
 msgctxt "Address for delivering letters"
 msgid "Postal"
 msgstr "Паштовы"
 
-#: address.cpp:513
+#: address.cpp:359
 #, kde-format
 msgctxt "Address for delivering packages"
 msgid "Parcel"
 msgstr ""
 
-#: address.cpp:515
+#: address.cpp:361
 #, kde-format
 msgctxt "Home Address"
 msgid "Home"
 msgstr "Хатні"
 
-#: address.cpp:517
+#: address.cpp:363
 #, kde-format
 msgctxt "Work Address"
 msgid "Work"
 msgstr ""
 
-#: address.cpp:519
+#: address.cpp:365
 #, kde-format
 msgid "Preferred Address"
 msgstr "Асноўны адрас"
 
-#: address.cpp:521
+#: address.cpp:367
 #, fuzzy, kde-format
 #| msgid "Other"
 msgctxt "another type of address"
@@ -613,3 +614,160 @@ msgstr "Канфідэнцыйны"
 msgctxt "unknown secrecy type"
 msgid "Unknown type"
 msgstr "Невядомы тып"
+
+#~ msgid "List of Emails"
+#~ msgstr "Спіс электронных скрыняў"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Дарафей Праляскоўскі"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "komzpa@licei2.com"
+
+#~ msgid "Unable to load resource '%1'"
+#~ msgstr "Немагчыма адкрыць рэсурс '%1'"
+
+#, fuzzy
+#~| msgid "Select Addressee"
+#~ msgctxt "@title:window"
+#~ msgid "Select Addressee"
+#~ msgstr "Выберыце адрасата"
+
+#, fuzzy
+#~| msgid "Name"
+#~ msgctxt "@title:column addressee name"
+#~ msgid "Name"
+#~ msgstr "Назва"
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgctxt "@title:column addressee email"
+#~ msgid "Email"
+#~ msgstr "Электронная пошта"
+
+#, fuzzy
+#~| msgid "Selected"
+#~ msgctxt "@title:group selected addressees"
+#~ msgid "Selected"
+#~ msgstr "Вылучаны"
+
+#, fuzzy
+#~| msgid "Unselect"
+#~ msgctxt "@action:button unselect addressee"
+#~ msgid "Unselect"
+#~ msgstr "Зняць выбар"
+
+#, fuzzy
+#~ msgid "Configure Distribution Lists"
+#~ msgstr "Настаўленні спісаў распаўсюджвання"
+
+#~ msgid "Select Email Address"
+#~ msgstr "Выберыце адрас электроннай пошты"
+
+#~ msgid "Email Addresses"
+#~ msgstr "Адрасы электроннай пошты"
+
+#, fuzzy
+#~| msgid "Yes"
+#~ msgctxt "this the preferred email address"
+#~ msgid "Yes"
+#~ msgstr "Так"
+
+#, fuzzy
+#~| msgid "No"
+#~ msgctxt "this is not the preferred email address"
+#~ msgid "No"
+#~ msgstr "Не"
+
+#~ msgid "New List..."
+#~ msgstr "Новы спіс..."
+
+#~ msgid "Rename List..."
+#~ msgstr "Пераназваць спіс..."
+
+#~ msgid "Remove List"
+#~ msgstr "Выдаліць спіс"
+
+#~ msgid "Available addresses:"
+#~ msgstr "Наяўныя адрасы:"
+
+#, fuzzy
+#~| msgid "Preferred Email"
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Preferred Email"
+#~ msgstr "Асноўная электронная скрыня"
+
+#~ msgid "Add Entry"
+#~ msgstr "Дадаць запіс"
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Email"
+#~ msgstr "Электронная пошта"
+
+#, fuzzy
+#~| msgid "Use Preferred"
+#~ msgctxt "@title:column use preferred email"
+#~ msgid "Use Preferred"
+#~ msgstr "Выкарыстоўваць асноўны"
+
+#~ msgid "Change Email..."
+#~ msgstr "Змяніць электронную скрыню..."
+
+#~ msgid "Remove Entry"
+#~ msgstr "Выдаліць запіс"
+
+#, fuzzy
+#~ msgid "New Distribution List"
+#~ msgstr "Новы спіс распаўсюджвання"
+
+#~ msgid "Please enter &name:"
+#~ msgstr "Калі ласка, вызначыце &назву:"
+
+#, fuzzy
+#~ msgid "Distribution List"
+#~ msgstr "Спіс распаўсюджвання"
+
+#~ msgid "Please change &name:"
+#~ msgstr "Калі ласка, змяніце &назву:"
+
+#, fuzzy
+#~ msgid "Delete distribution list '%1'?"
+#~ msgstr "Выдаліць спіс распаўсюджвання '%1'?"
+
+#~ msgid "Selected addressees:"
+#~ msgstr "Выбраныя адрасаты:"
+
+#~ msgid "Selected addresses in '%1':"
+#~ msgstr "Выбраныя адрасы ў '%1':"
+
+#, fuzzy
+#~| msgid "No"
+#~ msgctxt "this is not preferred email address"
+#~ msgid "No"
+#~ msgstr "Не"
+
+#~ msgid "vCard"
+#~ msgstr "vCard"
+
+#~ msgid "vCard Format"
+#~ msgstr "Фармат vCard"
+
+#~ msgid "No description available."
+#~ msgstr "Апісанне недаступнае."
+
+#~ msgid "Error"
+#~ msgstr "Памылка"
+
+#, fuzzy
+#~| msgid "Unable to load resource '%1'"
+#~ msgid "Unable to open resource '%1'."
+#~ msgstr "Немагчыма адкрыць рэсурс '%1'"
+
+#, fuzzy
+#~| msgid "Select Addressee"
+#~ msgid "Default Address Book"
+#~ msgstr "Выберыце адрасата"

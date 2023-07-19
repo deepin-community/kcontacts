@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kabc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-24 00:14+0000\n"
+"POT-Creation-Date: 2022-02-27 00:41+0000\n"
 "PO-Revision-Date: 2010-02-01 08:16+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
@@ -19,88 +19,88 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: address.cpp:377
+#: address.cpp:223
 #, kde-format
 msgid "Post Office Box"
 msgstr "ਪੋਸਟ ਆਫਿਸ ਬਾਕਸ"
 
-#: address.cpp:393
+#: address.cpp:239
 #, kde-format
 msgid "Extended Address Information"
 msgstr "ਹੋਰ ਸਿਰਨਾਵਾਂ ਜਾਣਕਾਰੀ"
 
-#: address.cpp:409
+#: address.cpp:255
 #, kde-format
 msgid "Street"
 msgstr "ਗਲੀ"
 
-#: address.cpp:425
+#: address.cpp:271
 #, kde-format
 msgid "Locality"
 msgstr "ਟਿਕਾਣਾ"
 
-#: address.cpp:441
+#: address.cpp:287
 #, kde-format
 msgid "Region"
 msgstr "ਖੇਤਰ"
 
-#: address.cpp:457
+#: address.cpp:303
 #, kde-format
 msgid "Postal Code"
 msgstr "ਪੋਸਟ ਕੋਡ"
 
-#: address.cpp:473
+#: address.cpp:319
 #, kde-format
 msgid "Country"
 msgstr "ਦੇਸ਼"
 
-#: address.cpp:489
+#: address.cpp:335
 #, kde-format
 msgid "Delivery Label"
 msgstr "ਪਚਾਉਣਯੋਗ ਲੇਬਲ"
 
-#: address.cpp:507
+#: address.cpp:353
 #, kde-format
 msgctxt "Address is in home country"
 msgid "Domestic"
 msgstr "ਘਰੇਲੂ"
 
-#: address.cpp:509
+#: address.cpp:355
 #, kde-format
 msgctxt "Address is not in home country"
 msgid "International"
 msgstr "ਅੰਤਰਰਾਸ਼ਟਰੀ"
 
-#: address.cpp:511
+#: address.cpp:357
 #, kde-format
 msgctxt "Address for delivering letters"
 msgid "Postal"
 msgstr "ਪੋਸਟ"
 
-#: address.cpp:513
+#: address.cpp:359
 #, kde-format
 msgctxt "Address for delivering packages"
 msgid "Parcel"
 msgstr "ਪਾਰਸਲ"
 
-#: address.cpp:515
+#: address.cpp:361
 #, kde-format
 msgctxt "Home Address"
 msgid "Home"
 msgstr "ਘਰ"
 
-#: address.cpp:517
+#: address.cpp:363
 #, kde-format
 msgctxt "Work Address"
 msgid "Work"
 msgstr "ਕੰਮ"
 
-#: address.cpp:519
+#: address.cpp:365
 #, kde-format
 msgid "Preferred Address"
 msgstr "ਪਸੰਦੀਦਾ ਸਿਰਨਾਵਾਂ"
 
-#: address.cpp:521
+#: address.cpp:367
 #, kde-format
 msgctxt "another type of address"
 msgid "Other"
@@ -584,3 +584,158 @@ msgstr "ਗੁਪਤ"
 msgctxt "unknown secrecy type"
 msgid "Unknown type"
 msgstr "ਅਣਜਾਣ ਕਿਸਮ"
+
+#~ msgctxt "Preferred address"
+#~ msgid "Preferred"
+#~ msgstr "ਪਸੰਦੀਦਾ"
+
+#~ msgid "List of Emails"
+#~ msgstr "ਈਮੇਲਾਂ ਦੀ ਲਿਸਟ"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "aalam@users.sf.net"
+
+#~ msgid "Unable to load resource '%1'"
+#~ msgstr "ਸਰੋਤ '%1' ਲੋਡ ਕਰਨ ਲਈ ਅਸਮਰੱਥ"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Addressee"
+#~ msgstr "ਐਡਰੈੱਸ ਚੁਣੋ"
+
+#~ msgctxt "@title:column addressee name"
+#~ msgid "Name"
+#~ msgstr "ਨਾਂ"
+
+#~ msgctxt "@title:column addressee email"
+#~ msgid "Email"
+#~ msgstr "ਈਮੇਲ"
+
+#~ msgctxt "@title:group selected addressees"
+#~ msgid "Selected"
+#~ msgstr "ਚੁਣੇ"
+
+#~ msgctxt "@action:button unselect addressee"
+#~ msgid "Unselect"
+#~ msgstr "ਅਣ-ਚੁਣੇ"
+
+#~ msgid "Configure Distribution Lists"
+#~ msgstr "ਵੰਡ ਲਿਸਟ ਸੰਰਚਨਾ"
+
+#~ msgid "Select Email Address"
+#~ msgstr "ਈਮੇਲ ਸਿਰਨਾਵਾਂ ਚੁਣੋ"
+
+#~ msgid "Email Addresses"
+#~ msgstr "ਈਮੇਲ ਸਿਰਨਾਵਾਂ"
+
+#~ msgctxt "this the preferred email address"
+#~ msgid "Yes"
+#~ msgstr "ਹਾਂ"
+
+#~ msgctxt "this is not the preferred email address"
+#~ msgid "No"
+#~ msgstr "ਨਹੀਂ"
+
+#~ msgid "New List..."
+#~ msgstr "ਨਵੀਂ ਲਿਸਟ..."
+
+#~ msgid "Rename List..."
+#~ msgstr "ਲਿਸਟ ਨਾਂ ਬਦਲੋ"
+
+#~ msgid "Remove List"
+#~ msgstr "ਲਿਸਟ ਹਟਾਓ"
+
+#~ msgid "Available addresses:"
+#~ msgstr "ਉਪਲੱਬਧ ਸਿਰਨਾਵੀਂ:"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Preferred Email"
+#~ msgstr "ਪਸੰਦੀਦਾ ਈ-ਮੇਲ"
+
+#~ msgid "Add Entry"
+#~ msgstr "ਇੰਦਰਾਜ਼ ਸ਼ਾਮਲ"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Email"
+#~ msgstr "ਈਮੇਲ"
+
+#~ msgctxt "@title:column use preferred email"
+#~ msgid "Use Preferred"
+#~ msgstr "ਪਸੰਦੀਦਾ ਵਰਤੋਂ"
+
+#~ msgid "Change Email..."
+#~ msgstr "ਈਮੇਲ ਬਦਲੋ"
+
+#~ msgid "Remove Entry"
+#~ msgstr "ਇੰਦਰਾਜ਼ ਹਟਾਓ"
+
+#~ msgid "New Distribution List"
+#~ msgstr "ਨਵੀਂ ਵੰਡ ਲਿਸਟ"
+
+#~ msgid "Please enter &name:"
+#~ msgstr "ਨਾਂ ਦਿਓ ਜੀ(&n):"
+
+#~ msgid "Distribution List"
+#~ msgstr "ਵੰਡ ਲਿਸਟ"
+
+#~ msgid "Please change &name:"
+#~ msgstr "ਆਪਣਾ ਨਾਂ ਬਦਲੋ ਜੀ(&n):"
+
+#~ msgid "Delete distribution list '%1'?"
+#~ msgstr "ਕੀ ਵੰਡ ਲਿਸਟ '%1' ਹਟਾਉਣੀ ਹੈ?"
+
+#~ msgid "Selected addressees:"
+#~ msgstr "ਚੁਣੇ ਸਿਰਨਾਵੀਂ:"
+
+#~ msgid "Selected addresses in '%1':"
+#~ msgstr "'%1' ਵਿੱਚ ਚੁਣੇ ਐਡਰੈੱਸ:"
+
+#~ msgctxt "this is not preferred email address"
+#~ msgid "No"
+#~ msgstr "ਨਹੀਂ"
+
+#~ msgid "vCard"
+#~ msgstr "vCard"
+
+#~ msgid "vCard Format"
+#~ msgstr "vCard ਫਾਰਮੈਟ"
+
+#~ msgid "No description available."
+#~ msgstr "ਕੋਈ ਵੇਰਵਾ ਨਹੀਂ ਹੈ।"
+
+#~ msgid "Unable to open lock file."
+#~ msgstr "ਲਾਕ ਫਾਇਲ ਖੋਲ੍ਹਣ ਤੋਂ ਅਸਮਰੱਥ ਹੈ।"
+
+#~ msgid "The resource '%1' is locked by application '%2'."
+#~ msgstr "ਕਾਰਜ '%2' ਨੇ ਸਰੋਤ '%1' ਤੇ ਲਾਕ ਲਗਾਇਆ ਹੈ।"
+
+#~ msgid "Error"
+#~ msgstr "ਗਲਤੀ"
+
+#~ msgid "Unlock failed. Lock file is owned by other process: %1 (%2)"
+#~ msgstr "ਅਣ-ਲਾਕ ਅਸਫਲ, ਲਾਕ ਫਾਇਲ਼ ਹੋਰ ਕਾਰਜ ਨੇ ਸੰਭਾਲ ਹੈ: %1 (%2)"
+
+#~ msgid "LockNull: All locks succeed but no actual locking is done."
+#~ msgstr "LockNull: ਸਾਰੇ ਲਾਕ ਸਫਲ ਰਹੇ ਹਨ, ਪਰ ਅਸਲ ਵਿੱਚ ਅਸਲੀ ਲਾਕਿੰਗ ਅਸਫਲ ਹੈ।"
+
+#~ msgid "LockNull: All locks fail."
+#~ msgstr "LockNull: ਸਾਰੇ ਲਾਕ ਅਸਫਲ।"
+
+#~ msgid "Loading resource '%1' failed."
+#~ msgstr "ਸਰੋਤ '%1' ਲੋਡ ਕਰਨ ਲਈ ਅਸਫ਼ਲ ਹੈ।"
+
+#~ msgid "Saving resource '%1' failed."
+#~ msgstr "ਸਰੋਤ '%1' ਸੰਭਾਲਣ ਲਈ ਫੇਲ੍ਹ ਹੈ।"
+
+#~ msgid "Unable to open resource '%1'."
+#~ msgstr "ਸਰੋਤ '%1' ਖੋਲ੍ਹਣ ਲਈ ਅਸਮਰੱਥ"
+
+#~ msgid "Default Address Book"
+#~ msgstr "ਡਿਫਾਲਟ ਐਡਰੈਸ ਬੁੱਕ"
+
+#~ msgid "Unable to save to resource '%1'. It is locked."
+#~ msgstr "ਸਰੋਤ '%1' ਸੰਭਾਲਣ ਲਈ ਅਸਮਰੱਥ। ਇਹ ਲਾਕ ਹੈ।"

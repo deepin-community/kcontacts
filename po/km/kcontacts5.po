@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kabc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-24 00:14+0000\n"
+"POT-Creation-Date: 2022-02-27 00:41+0000\n"
 "PO-Revision-Date: 2010-01-25 15:44+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -21,88 +21,88 @@ msgstr ""
 "\n"
 "\n"
 
-#: address.cpp:377
+#: address.cpp:223
 #, kde-format
 msgid "Post Office Box"
 msgstr "ប្រអប់​សំបុត្រ"
 
-#: address.cpp:393
+#: address.cpp:239
 #, kde-format
 msgid "Extended Address Information"
 msgstr "ព័ត៌មាន​អាសយដ្ឋាន​បន្ថែម"
 
-#: address.cpp:409
+#: address.cpp:255
 #, kde-format
 msgid "Street"
 msgstr "ផ្លូវ"
 
-#: address.cpp:425
+#: address.cpp:271
 #, kde-format
 msgid "Locality"
 msgstr "មូលដ្ឋាន"
 
-#: address.cpp:441
+#: address.cpp:287
 #, kde-format
 msgid "Region"
 msgstr "តំបន់"
 
-#: address.cpp:457
+#: address.cpp:303
 #, kde-format
 msgid "Postal Code"
 msgstr "កូដ​​ប្រៃសណីយ៍"
 
-#: address.cpp:473
+#: address.cpp:319
 #, kde-format
 msgid "Country"
 msgstr "ប្រទេស"
 
-#: address.cpp:489
+#: address.cpp:335
 #, kde-format
 msgid "Delivery Label"
 msgstr "ស្លាក​បញ្ចូន"
 
-#: address.cpp:507
+#: address.cpp:353
 #, kde-format
 msgctxt "Address is in home country"
 msgid "Domestic"
 msgstr "ក្នុង​ប្រទេស"
 
-#: address.cpp:509
+#: address.cpp:355
 #, kde-format
 msgctxt "Address is not in home country"
 msgid "International"
 msgstr "អន្តរជាតិ"
 
-#: address.cpp:511
+#: address.cpp:357
 #, kde-format
 msgctxt "Address for delivering letters"
 msgid "Postal"
 msgstr "ប្រៃសណីយ៍"
 
-#: address.cpp:513
+#: address.cpp:359
 #, kde-format
 msgctxt "Address for delivering packages"
 msgid "Parcel"
 msgstr "កញ្ចប់"
 
-#: address.cpp:515
+#: address.cpp:361
 #, kde-format
 msgctxt "Home Address"
 msgid "Home"
 msgstr "ផ្ទះ"
 
-#: address.cpp:517
+#: address.cpp:363
 #, kde-format
 msgctxt "Work Address"
 msgid "Work"
 msgstr "ការងារ"
 
-#: address.cpp:519
+#: address.cpp:365
 #, kde-format
 msgid "Preferred Address"
 msgstr "អាសយដ្ឋាន​ដែល​ពេញចិត្ត"
 
-#: address.cpp:521
+#: address.cpp:367
 #, kde-format
 msgctxt "another type of address"
 msgid "Other"
@@ -586,3 +586,160 @@ msgstr "សម្ងាត់"
 msgctxt "unknown secrecy type"
 msgid "Unknown type"
 msgstr "ប្រភេទ​មិន​ស្គាល់"
+
+#~ msgctxt "Preferred address"
+#~ msgid "Preferred"
+#~ msgstr "ពេញចិត្ត"
+
+#~ msgid "List of Emails"
+#~ msgstr "បញ្ជី​អ៊ីមែល"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ខឹម សុខែម, អេង វណ្ណៈ, អោក ពិសិដ្ឋ​​"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "khoemsokhem@khmeros.info,​​evannak@khmeros.info,piseth_dv@khmeros.info"
+
+#~ msgid "Unable to load resource '%1'"
+#~ msgstr "មិន​អាច​ផ្ទុក​ធនធាន '%1'"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Addressee"
+#~ msgstr "ជ្រើស​អ្នក​ទទួ​សំបុត្រ"
+
+#~ msgctxt "@title:column addressee name"
+#~ msgid "Name"
+#~ msgstr "ឈ្មោះ"
+
+#~ msgctxt "@title:column addressee email"
+#~ msgid "Email"
+#~ msgstr "អ៊ីមែល"
+
+#~ msgctxt "@title:group selected addressees"
+#~ msgid "Selected"
+#~ msgstr "បាន​ជ្រើស"
+
+#~ msgctxt "@action:button unselect addressee"
+#~ msgid "Unselect"
+#~ msgstr "ដោះ​ជ្រើស"
+
+#~ msgid "Configure Distribution Lists"
+#~ msgstr "កំណត់​រចនាសម្ព័ន្ធ​បញ្ជី​ចែកចាយ"
+
+#~ msgid "Select Email Address"
+#~ msgstr "ជ្រើស​អាសយដ្ឋាន​អ៊ីមែល"
+
+#~ msgid "Email Addresses"
+#~ msgstr "អាសយដ្ឋាន​អ៊ីមែល"
+
+#~ msgctxt "this the preferred email address"
+#~ msgid "Yes"
+#~ msgstr "បាទ/ចាស"
+
+#~ msgctxt "this is not the preferred email address"
+#~ msgid "No"
+#~ msgstr "ទេ"
+
+#~ msgid "New List..."
+#~ msgstr "បញ្ជី​ថ្មី..."
+
+#~ msgid "Rename List..."
+#~ msgstr "ប្ដូរ​ឈ្មោះ​បញ្ជី..."
+
+#~ msgid "Remove List"
+#~ msgstr "យក​បញ្ជី​ចេញ"
+
+#~ msgid "Available addresses:"
+#~ msgstr "អាសយដ្ឋាន​ដែល​មាន ៖"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Preferred Email"
+#~ msgstr "អ៊ីមែល​ដែល​ចូល​ចិត្ត"
+
+#~ msgid "Add Entry"
+#~ msgstr "បន្ថែម​ធាតុបញ្ចូល"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Email"
+#~ msgstr "អ៊ីមែល"
+
+#~ msgctxt "@title:column use preferred email"
+#~ msgid "Use Preferred"
+#~ msgstr "ការប្រើ​ដែល​ចូលចិត្ត"
+
+#~ msgid "Change Email..."
+#~ msgstr "ផ្លាស់ប្ដូរ​អ៊ីមែល..."
+
+#~ msgid "Remove Entry"
+#~ msgstr "យក​ធាតុ​ចេញ"
+
+#~ msgid "New Distribution List"
+#~ msgstr "បញ្ជី​ចែកចាយ​ថ្មី"
+
+#~ msgid "Please enter &name:"
+#~ msgstr "សូម​បញ្ចូល​ឈ្មោះ ៖"
+
+#~ msgid "Distribution List"
+#~ msgstr "បញ្ជី​ចែកចាយ"
+
+#~ msgid "Please change &name:"
+#~ msgstr "សូម​ផ្លាស់ប្ដូរ​ឈ្មោះ ៖"
+
+#~ msgid "Delete distribution list '%1'?"
+#~ msgstr "លុប​បញ្ជី​ចែកចាយ '%1' ?"
+
+#~ msgid "Selected addressees:"
+#~ msgstr "អ្នក​ទទួល​សំបុត្រ​ដែល​បាន​ជ្រើស ៖"
+
+#~ msgid "Selected addresses in '%1':"
+#~ msgstr "អាសយដ្ឋាន​ដែល​បាន​ជ្រើស​ក្នុង '%1' ៖"
+
+#~ msgctxt "this is not preferred email address"
+#~ msgid "No"
+#~ msgstr "ទេ"
+
+#~ msgid "vCard"
+#~ msgstr "vCard"
+
+#~ msgid "vCard Format"
+#~ msgstr "ទ្រង់ទ្រាយ vCard"
+
+#~ msgid "No description available."
+#~ msgstr "មិន​មាន​​ការ​ពិពណ៌នា ។"
+
+#~ msgid "Unable to open lock file."
+#~ msgstr "មិន​អាច​បើក​ឯកសារ​ជាប់​សោ ។"
+
+#~ msgid "The resource '%1' is locked by application '%2'."
+#~ msgstr "ធនធាន '%1' ត្រូវ​បាន​ចាក់សោ​ដោយ​កម្មវិធី '%2' ។"
+
+#~ msgid "Error"
+#~ msgstr "កំហុស"
+
+#~ msgid "Unlock failed. Lock file is owned by other process: %1 (%2)"
+#~ msgstr "បាន​បរាជ័យ​ក្នុង​ការដោះសោ ។ ឯកសារ​ជាប់សោ​ជា​កម្មសិទ្ធិ​របស់​ដំណើរការ​ផ្សេង ៖ %1 (%2)"
+
+#~ msgid "LockNull: All locks succeed but no actual locking is done."
+#~ msgstr ""
+#~ "LockNull ៖ ការ​ចាក់សោ​​​ទាំងអស់​ជោគជ័យ  ប៉ុន្តែ​គ្មាន​ការចាក់សោ​ពិតប្រាកដ​ត្រូវ​បាន​ធ្វើនោះ​ទេ ។"
+
+#~ msgid "LockNull: All locks fail."
+#~ msgstr "LockNull ៖ ការចាក់សោ​ទាំងអស់​បាន​បរាជ័យ ។"
+
+#~ msgid "Loading resource '%1' failed."
+#~ msgstr "បានបរាជ័យ​ក្នុង​កា​រផ្ទុក '%1' ។"
+
+#~ msgid "Saving resource '%1' failed."
+#~ msgstr "បាន​បរាជ័យ​ក្នុង​កា​ររក្សាទុក​ធនធាន '%1' ។"
+
+#~ msgid "Unable to open resource '%1'."
+#~ msgstr "មិនអាច​បើក​ធនធាន '%1' បាន​ទេ ។"
+
+#~ msgid "Default Address Book"
+#~ msgstr "សៀវភៅ​អាសយដ្ឋាន​លំនាំដើម"
+
+#~ msgid "Unable to save to resource '%1'. It is locked."
+#~ msgstr "មិន​អាច​រក្សាទុក​ទៅ​កាន់​ធនធាន '%1' ។ វា​ជាប់​សោ ។"

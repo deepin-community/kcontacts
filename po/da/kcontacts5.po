@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kabc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-24 00:14+0000\n"
+"POT-Creation-Date: 2022-02-27 00:41+0000\n"
 "PO-Revision-Date: 2016-07-11 21:52+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -20,88 +20,88 @@ msgstr ""
 "X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: address.cpp:377
+#: address.cpp:223
 #, kde-format
 msgid "Post Office Box"
 msgstr "Postboks"
 
-#: address.cpp:393
+#: address.cpp:239
 #, kde-format
 msgid "Extended Address Information"
 msgstr "Udvidet adresseinformation"
 
-#: address.cpp:409
+#: address.cpp:255
 #, kde-format
 msgid "Street"
 msgstr "Gade"
 
-#: address.cpp:425
+#: address.cpp:271
 #, kde-format
 msgid "Locality"
 msgstr "Egn"
 
-#: address.cpp:441
+#: address.cpp:287
 #, kde-format
 msgid "Region"
 msgstr "Region"
 
-#: address.cpp:457
+#: address.cpp:303
 #, kde-format
 msgid "Postal Code"
 msgstr "Postnummer"
 
-#: address.cpp:473
+#: address.cpp:319
 #, kde-format
 msgid "Country"
 msgstr "Land"
 
-#: address.cpp:489
+#: address.cpp:335
 #, kde-format
 msgid "Delivery Label"
 msgstr "Leveringsetiket"
 
-#: address.cpp:507
+#: address.cpp:353
 #, kde-format
 msgctxt "Address is in home country"
 msgid "Domestic"
 msgstr "Indenrigs"
 
-#: address.cpp:509
+#: address.cpp:355
 #, kde-format
 msgctxt "Address is not in home country"
 msgid "International"
 msgstr "International"
 
-#: address.cpp:511
+#: address.cpp:357
 #, kde-format
 msgctxt "Address for delivering letters"
 msgid "Postal"
 msgstr "Post"
 
-#: address.cpp:513
+#: address.cpp:359
 #, kde-format
 msgctxt "Address for delivering packages"
 msgid "Parcel"
 msgstr "Pakke"
 
-#: address.cpp:515
+#: address.cpp:361
 #, kde-format
 msgctxt "Home Address"
 msgid "Home"
 msgstr "Hjemme"
 
-#: address.cpp:517
+#: address.cpp:363
 #, kde-format
 msgctxt "Work Address"
 msgid "Work"
 msgstr "Arbejde"
 
-#: address.cpp:519
+#: address.cpp:365
 #, kde-format
 msgid "Preferred Address"
 msgstr "Foretrukken adresse"
 
-#: address.cpp:521
+#: address.cpp:367
 #, kde-format
 msgctxt "another type of address"
 msgid "Other"
@@ -585,3 +585,158 @@ msgstr "Fortrolig"
 msgctxt "unknown secrecy type"
 msgid "Unknown type"
 msgstr "Ukendt type"
+
+#~ msgctxt "Preferred address"
+#~ msgid "Preferred"
+#~ msgstr "Foretrukken"
+
+#~ msgid "List of Emails"
+#~ msgstr "Liste over e-mails"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Martin Schlander"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "mschlander@opensuse.org"
+
+#~ msgid "Unable to load resource '%1'"
+#~ msgstr "Kan ikke indlæse ressourcen '%1'"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Addressee"
+#~ msgstr "Vælg adressat"
+
+#~ msgctxt "@title:column addressee name"
+#~ msgid "Name"
+#~ msgstr "Navn"
+
+#~ msgctxt "@title:column addressee email"
+#~ msgid "Email"
+#~ msgstr "E-mail"
+
+#~ msgctxt "@title:group selected addressees"
+#~ msgid "Selected"
+#~ msgstr "Valgt"
+
+#~ msgctxt "@action:button unselect addressee"
+#~ msgid "Unselect"
+#~ msgstr "Fravælg"
+
+#~ msgid "Configure Distribution Lists"
+#~ msgstr "Indstil distributionslister"
+
+#~ msgid "Select Email Address"
+#~ msgstr "Vælg e-mailadresse"
+
+#~ msgid "Email Addresses"
+#~ msgstr "E-mailadresser"
+
+#~ msgctxt "this the preferred email address"
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgctxt "this is not the preferred email address"
+#~ msgid "No"
+#~ msgstr "Nej"
+
+#~ msgid "New List..."
+#~ msgstr "Ny liste..."
+
+#~ msgid "Rename List..."
+#~ msgstr "Omdøb liste..."
+
+#~ msgid "Remove List"
+#~ msgstr "Fjern liste"
+
+#~ msgid "Available addresses:"
+#~ msgstr "Tilgængelige adresser:"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Preferred Email"
+#~ msgstr "Foretrukken e-mail"
+
+#~ msgid "Add Entry"
+#~ msgstr "Tilføj indgang"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Email"
+#~ msgstr "E-mail"
+
+#~ msgctxt "@title:column use preferred email"
+#~ msgid "Use Preferred"
+#~ msgstr "Brug foretrukken"
+
+#~ msgid "Change Email..."
+#~ msgstr "Ændr e-mail..."
+
+#~ msgid "Remove Entry"
+#~ msgstr "Fjern indgang"
+
+#~ msgid "New Distribution List"
+#~ msgstr "Ny distributionsliste"
+
+#~ msgid "Please enter &name:"
+#~ msgstr "Indtast venligst &navn:"
+
+#~ msgid "Distribution List"
+#~ msgstr "Distributionsliste"
+
+#~ msgid "Please change &name:"
+#~ msgstr "Ændr venligst &navn:"
+
+#~ msgid "Delete distribution list '%1'?"
+#~ msgstr "Slet distributionslisten '%1'?"
+
+#~ msgid "Selected addressees:"
+#~ msgstr "Valgte adresserede:"
+
+#~ msgid "Selected addresses in '%1':"
+#~ msgstr "Valgte adresser i '%1'."
+
+#~ msgctxt "this is not preferred email address"
+#~ msgid "No"
+#~ msgstr "Nej"
+
+#~ msgid "vCard"
+#~ msgstr "vCard"
+
+#~ msgid "vCard Format"
+#~ msgstr "vCard-format"
+
+#~ msgid "No description available."
+#~ msgstr "Ingen beskrivelse tilgængelig."
+
+#~ msgid "Unable to open lock file."
+#~ msgstr "Kan ikke åbne lock-fil."
+
+#~ msgid "The resource '%1' is locked by application '%2'."
+#~ msgstr "Ressourcen '%1' er låst af programmet '%2'."
+
+#~ msgid "Error"
+#~ msgstr "Fejl"
+
+#~ msgid "Unlock failed. Lock file is owned by other process: %1 (%2)"
+#~ msgstr "Lås op fejlede. Lock-fil er ejet af en anden proces: %1 (%2)"
+
+#~ msgid "LockNull: All locks succeed but no actual locking is done."
+#~ msgstr "LockNull: Alle låse gennemføres men ingen låsning udføres faktisk."
+
+#~ msgid "LockNull: All locks fail."
+#~ msgstr "LockNull: Alle låse fejler."
+
+#~ msgid "Loading resource '%1' failed."
+#~ msgstr "Indlæsning af ressourcen '%1' fejlede."
+
+#~ msgid "Saving resource '%1' failed."
+#~ msgstr "Gemning af ressourcen '%1' fejlede."
+
+#~ msgid "Unable to open resource '%1'."
+#~ msgstr "Kan ikke åbne ressourcen \"%1\"."
+
+#~ msgid "Default Address Book"
+#~ msgstr "Standardadressebog"
+
+#~ msgid "Unable to save to resource '%1'. It is locked."
+#~ msgstr "Kan ikke gemme til ressourcen '%1'. Den er låst."

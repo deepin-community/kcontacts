@@ -8,19 +8,22 @@ Uploaders: Aurélien COUDERC <coucouf@debian.org>,
 Build-Depends: cmake (>= 3.16~),
                debhelper-compat (= 13),
                doxygen,
-               extra-cmake-modules (>= 5.90.0~),
+               extra-cmake-modules (>= 5.103.0~),
                gettext,
-               libkf5codecs-dev (>= 5.90.0~),
-               libkf5config-dev (>= 5.90.0~),
-               libkf5coreaddons-dev (>= 5.90.0~),
-               libkf5i18n-dev (>= 5.90.0~),
+               iso-codes <!nocheck>,
+               libkf5codecs-dev (>= 5.103.0~),
+               libkf5config-dev (>= 5.103.0~),
+               libkf5coreaddons-dev (>= 5.103.0~),
+               libkf5i18n-dev (>= 5.103.0~),
+               locales-all <!nocheck>,
                pkg-kde-tools (>> 0.15.15),
                qhelpgenerator-qt5,
                qtbase5-dev (>= 5.15.2~),
+               qtdeclarative5-dev (>= 5.15.2~),
                qttools5-dev (>= 5.12.0~),
-               xauth,
-               xvfb,
-Standards-Version: 4.6.0
+               xauth <!nocheck>,
+               xvfb <!nocheck>,
+Standards-Version: 4.6.2
 Homepage: https://invent.kde.org/frameworks/kcontacts
 Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/kcontacts
 Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/kcontacts.git
@@ -29,7 +32,7 @@ Rules-Requires-Root: no
 Package: libkf5contacts-data
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}
+Depends: ${misc:Depends},
 Description: data files for kcontacts
  KContacts is an API for address book data.
  .
@@ -39,11 +42,11 @@ Package: libkf5contacts-dev
 Section: libdevel
 Architecture: any
 Multi-Arch: same
-Depends: libkf5codecs-dev (>= 5.90.0~),
-         libkf5config-dev (>= 5.90.0~),
+Depends: libkf5codecs-dev (>= 5.103.0~),
+         libkf5config-dev (>= 5.103.0~),
          libkf5contacts5 (= ${binary:Version}),
-         libkf5coreaddons-dev (>= 5.90.0~),
-         libkf5i18n-dev (>= 5.90.0~),
+         libkf5coreaddons-dev (>= 5.103.0~),
+         libkf5i18n-dev (>= 5.103.0~),
          qtbase5-dev (>= 5.15.2~),
          ${misc:Depends},
 Description: development files for kcontacts
@@ -54,7 +57,7 @@ Description: development files for kcontacts
 Package: libkf5contacts-doc
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}
+Depends: ${misc:Depends},
 Section: doc
 Description: address book API for KDE Framework (documentation)
  KContacts is an API for address book data.
@@ -67,6 +70,6 @@ Multi-Arch: same
 Depends: libkf5contacts-data (= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends},
-Recommends: iso-codes
+Recommends: iso-codes,
 Description: address book API for KDE frameworks
  KContacts is an API for address book data.

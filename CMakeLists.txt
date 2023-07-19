@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.16)
 
-set(KF_VERSION "5.90.0") # handled by release scripts
-set(KF_DEP_VERSION "5.90.0") # handled by release scripts
+set(KF_VERSION "5.103.0") # handled by release scripts
+set(KF_DEP_VERSION "5.103.0") # handled by release scripts
 
 project(KContacts VERSION ${KF_VERSION})
 
 # ECM setup
 include(FeatureSummary)
-find_package(ECM 5.90.0 NO_MODULE)
+find_package(ECM 5.103.0 NO_MODULE)
 set_package_properties(ECM PROPERTIES TYPE REQUIRED DESCRIPTION "Extra CMake Modules." URL "https://commits.kde.org/extra-cmake-modules")
 feature_summary(WHAT REQUIRED_PACKAGES_NOT_FOUND FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
@@ -25,6 +25,7 @@ include(ECMGenerateExportHeader)
 include(ECMGenerateHeaders)
 include(ECMGeneratePriFile)
 include(ECMGenerateExportHeader)
+include(ECMDeprecationSettings)
 
 include(ECMSetupVersion)
 include(ECMQtDeclareLoggingCategory)
@@ -44,7 +45,15 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX KContacts
 )
 
 ########### Find packages ###########
-find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} REQUIRED COMPONENTS Gui)
+find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} NO_MODULE COMPONENTS Gui Quick)
+set_package_properties(Qt${QT_MAJOR_VERSION}Gui PROPERTIES
+    TYPE REQUIRED
+    PURPOSE "Basic library component"
+)
+set_package_properties(Qt${QT_MAJOR_VERSION}Quick PROPERTIES
+    TYPE OPTIONAL
+    PURPOSE "QtQuick plugin"
+)
 find_package(KF5 ${KF_DEP_VERSION} REQUIRED COMPONENTS CoreAddons I18n Config Codecs)
 if (QT_MAJOR_VERSION STREQUAL "6")
     find_package(Qt6Core5Compat)
@@ -55,8 +64,10 @@ endif()
 add_definitions(-DTRANSLATION_DOMAIN=\"kcontacts5\")
 ki18n_install(po)
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055900)
+ecm_set_disabled_deprecation_versions(
+    QT 5.15.2
+    KF 5.95.0
+)
 
 add_subdirectory(src)
 
@@ -95,7 +106,7 @@ install(EXPORT KF5ContactsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE 
 
 install(FILES
    ${CMAKE_CURRENT_BINARY_DIR}/kcontacts_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF} COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KContacts COMPONENT Devel
 )
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

@@ -16,5 +16,10 @@
         <file>twitter.desktop</file>
         <file>xmpp.desktop</file>
         <file>ymsgr.desktop</file>
+        <file>matrix.desktop</file>
+        <file>telegram.desktop</file>
+        <file>rocketchat.desktop</file>
+        <file>signal.desktop</file>
+        <file>threema.desktop</file>
     </qresource>
 </RCC>

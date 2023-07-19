@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-24 00:14+0000\n"
+"POT-Creation-Date: 2022-02-27 00:41+0000\n"
 "PO-Revision-Date: 2016-12-11 22:23+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,88 +17,88 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: address.cpp:377
+#: address.cpp:223
 #, kde-format
 msgid "Post Office Box"
 msgstr "우편 사서함"
 
-#: address.cpp:393
+#: address.cpp:239
 #, kde-format
 msgid "Extended Address Information"
 msgstr "확장 주소 정보"
 
-#: address.cpp:409
+#: address.cpp:255
 #, kde-format
 msgid "Street"
 msgstr "도로명"
 
-#: address.cpp:425
+#: address.cpp:271
 #, kde-format
 msgid "Locality"
 msgstr "자치구"
 
-#: address.cpp:441
+#: address.cpp:287
 #, kde-format
 msgid "Region"
 msgstr "지역"
 
-#: address.cpp:457
+#: address.cpp:303
 #, kde-format
 msgid "Postal Code"
 msgstr "우편 번호"
 
-#: address.cpp:473
+#: address.cpp:319
 #, kde-format
 msgid "Country"
 msgstr "국가"
 
-#: address.cpp:489
+#: address.cpp:335
 #, kde-format
 msgid "Delivery Label"
 msgstr "배달 정보"
 
-#: address.cpp:507
+#: address.cpp:353
 #, kde-format
 msgctxt "Address is in home country"
 msgid "Domestic"
 msgstr "국내"
 
-#: address.cpp:509
+#: address.cpp:355
 #, kde-format
 msgctxt "Address is not in home country"
 msgid "International"
 msgstr "국제"
 
-#: address.cpp:511
+#: address.cpp:357
 #, kde-format
 msgctxt "Address for delivering letters"
 msgid "Postal"
 msgstr "우편"
 
-#: address.cpp:513
+#: address.cpp:359
 #, kde-format
 msgctxt "Address for delivering packages"
 msgid "Parcel"
 msgstr "소포"
 
-#: address.cpp:515
+#: address.cpp:361
 #, kde-format
 msgctxt "Home Address"
 msgid "Home"
 msgstr "집"
 
-#: address.cpp:517
+#: address.cpp:363
 #, kde-format
 msgctxt "Work Address"
 msgid "Work"
 msgstr "직장"
 
-#: address.cpp:519
+#: address.cpp:365
 #, kde-format
 msgid "Preferred Address"
 msgstr "선호 주소"
 
-#: address.cpp:521
+#: address.cpp:367
 #, kde-format
 msgctxt "another type of address"
 msgid "Other"
@@ -582,3 +582,158 @@ msgstr "통제됨"
 msgctxt "unknown secrecy type"
 msgid "Unknown type"
 msgstr "알 수 없는 형식"
+
+#~ msgctxt "Preferred address"
+#~ msgid "Preferred"
+#~ msgstr "선호함"
+
+#~ msgid "List of Emails"
+#~ msgstr "이메일 목록"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Shinjo Park"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde@peremen.name"
+
+#~ msgid "Unable to load resource '%1'"
+#~ msgstr "자원 '%1'을(를) 불러올 수 없음"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Addressee"
+#~ msgstr "주소 대상 선택"
+
+#~ msgctxt "@title:column addressee name"
+#~ msgid "Name"
+#~ msgstr "이름"
+
+#~ msgctxt "@title:column addressee email"
+#~ msgid "Email"
+#~ msgstr "이메일"
+
+#~ msgctxt "@title:group selected addressees"
+#~ msgid "Selected"
+#~ msgstr "선택됨"
+
+#~ msgctxt "@action:button unselect addressee"
+#~ msgid "Unselect"
+#~ msgstr "선택 해제"
+
+#~ msgid "Configure Distribution Lists"
+#~ msgstr "분배 목록 설정"
+
+#~ msgid "Select Email Address"
+#~ msgstr "이메일 주소 선택"
+
+#~ msgid "Email Addresses"
+#~ msgstr "이메일 주소"
+
+#~ msgctxt "this the preferred email address"
+#~ msgid "Yes"
+#~ msgstr "예"
+
+#~ msgctxt "this is not the preferred email address"
+#~ msgid "No"
+#~ msgstr "아니요"
+
+#~ msgid "New List..."
+#~ msgstr "새 목록..."
+
+#~ msgid "Rename List..."
+#~ msgstr "목록 이름 변경..."
+
+#~ msgid "Remove List"
+#~ msgstr "목록 삭제"
+
+#~ msgid "Available addresses:"
+#~ msgstr "사용 가능한 주소:"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Preferred Email"
+#~ msgstr "선호하는 이메일"
+
+#~ msgid "Add Entry"
+#~ msgstr "항목 추가"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Email"
+#~ msgstr "이메일"
+
+#~ msgctxt "@title:column use preferred email"
+#~ msgid "Use Preferred"
+#~ msgstr "선호 사용"
+
+#~ msgid "Change Email..."
+#~ msgstr "이메일 변경..."
+
+#~ msgid "Remove Entry"
+#~ msgstr "항목 삭제"
+
+#~ msgid "New Distribution List"
+#~ msgstr "새 분배 목록"
+
+#~ msgid "Please enter &name:"
+#~ msgstr "이름 입력(&N):"
+
+#~ msgid "Distribution List"
+#~ msgstr "분배 목록"
+
+#~ msgid "Please change &name:"
+#~ msgstr "이름 변경(&N):"
+
+#~ msgid "Delete distribution list '%1'?"
+#~ msgstr "분배 목록 '%1'을(를) 삭제하시겠습니까?"
+
+#~ msgid "Selected addressees:"
+#~ msgstr "주소 선택:"
+
+#~ msgid "Selected addresses in '%1':"
+#~ msgstr "'%1'의 주소 선택:"
+
+#~ msgctxt "this is not preferred email address"
+#~ msgid "No"
+#~ msgstr "아니요"
+
+#~ msgid "vCard"
+#~ msgstr "vCard"
+
+#~ msgid "vCard Format"
+#~ msgstr "vCard 형식"
+
+#~ msgid "No description available."
+#~ msgstr "설명 없음."
+
+#~ msgid "Unable to open lock file."
+#~ msgstr "잠금 파일을 열 수 없습니다."
+
+#~ msgid "The resource '%1' is locked by application '%2'."
+#~ msgstr "자원 '%1'을(를) 프로그램 '%2'에서 잠갔습니다."
+
+#~ msgid "Error"
+#~ msgstr "오류"
+
+#~ msgid "Unlock failed. Lock file is owned by other process: %1 (%2)"
+#~ msgstr "잠금 실패. 다른 프로세스에서 잠금 파일을 소유하고 있습니다: %1 (%2)"
+
+#~ msgid "LockNull: All locks succeed but no actual locking is done."
+#~ msgstr "LockNull: 모든 잠금이 성공하였지만 실제로 잠기지 않았습니다."
+
+#~ msgid "LockNull: All locks fail."
+#~ msgstr "LockNull: 모든 잠금이 실패하였습니다."
+
+#~ msgid "Loading resource '%1' failed."
+#~ msgstr "자원 '%1'을(를) 불러올 수 없습니다."
+
+#~ msgid "Saving resource '%1' failed."
+#~ msgstr "자원 '%1'을(를) 저장할 수 없습니다."
+
+#~ msgid "Unable to open resource '%1'."
+#~ msgstr "자원 '%1'을(를) 열 수 없습니다."
+
+#~ msgid "Default Address Book"
+#~ msgstr "기본 주소록"
+
+#~ msgid "Unable to save to resource '%1'. It is locked."
+#~ msgstr "자원 '%1'을(를) 저장할 수 없습니다. 잠겼습니다."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kabc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-24 00:14+0000\n"
+"POT-Creation-Date: 2022-02-27 00:41+0000\n"
 "PO-Revision-Date: 2008-01-28 11:36+0530\n"
 "Last-Translator: Ravishankar Shrivastava <aviratlami@aol.in>\n"
 "Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
@@ -18,94 +18,94 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: address.cpp:377
+#: address.cpp:223
 #, kde-format
 msgid "Post Office Box"
 msgstr "पोस्ट बॉक्स नं."
 
-#: address.cpp:393
+#: address.cpp:239
 #, kde-format
 msgid "Extended Address Information"
 msgstr "पता की विस्तारित जानकारी"
 
-#: address.cpp:409
+#: address.cpp:255
 #, kde-format
 msgid "Street"
 msgstr "सड़क"
 
-#: address.cpp:425
+#: address.cpp:271
 #, kde-format
 msgid "Locality"
 msgstr "जगह"
 
-#: address.cpp:441
+#: address.cpp:287
 #, kde-format
 msgid "Region"
 msgstr "क्षेत्र"
 
-#: address.cpp:457
+#: address.cpp:303
 #, kde-format
 msgid "Postal Code"
 msgstr "पिन कोड"
 
-#: address.cpp:473
+#: address.cpp:319
 #, kde-format
 msgid "Country"
 msgstr "देश"
 
-#: address.cpp:489
+#: address.cpp:335
 #, kde-format
 msgid "Delivery Label"
 msgstr "डिलेवरी लेबल"
 
-#: address.cpp:507
+#: address.cpp:353
 #, fuzzy, kde-format
 #| msgid "Domestic"
 msgctxt "Address is in home country"
 msgid "Domestic"
 msgstr "घरेलू"
 
-#: address.cpp:509
+#: address.cpp:355
 #, fuzzy, kde-format
 #| msgid "International"
 msgctxt "Address is not in home country"
 msgid "International"
 msgstr "अंतर्राष्ट्रीय"
 
-#: address.cpp:511
+#: address.cpp:357
 #, fuzzy, kde-format
 #| msgid "Postal"
 msgctxt "Address for delivering letters"
 msgid "Postal"
 msgstr "पोस्टल"
 
-#: address.cpp:513
+#: address.cpp:359
 #, fuzzy, kde-format
 #| msgid "Parcel"
 msgctxt "Address for delivering packages"
 msgid "Parcel"
 msgstr "पार्सल"
 
-#: address.cpp:515
+#: address.cpp:361
 #, fuzzy, kde-format
 #| msgid "Home"
 msgctxt "Home Address"
 msgid "Home"
 msgstr "घर"
 
-#: address.cpp:517
+#: address.cpp:363
 #, fuzzy, kde-format
 #| msgid "Work"
 msgctxt "Work Address"
 msgid "Work"
 msgstr "कार्यस्थल"
 
-#: address.cpp:519
+#: address.cpp:365
 #, kde-format
 msgid "Preferred Address"
 msgstr "पसंदीदा पता"
 
-#: address.cpp:521
+#: address.cpp:367
 #, fuzzy, kde-format
 #| msgid "Other"
 msgctxt "another type of address"
@@ -620,3 +620,190 @@ msgstr "गोपनीय"
 msgctxt "unknown secrecy type"
 msgid "Unknown type"
 msgstr "अज्ञात क़िस्म"
+
+#, fuzzy
+#~| msgid "Preferred"
+#~ msgctxt "Preferred address"
+#~ msgid "Preferred"
+#~ msgstr "पसंदीदा"
+
+#~ msgid "List of Emails"
+#~ msgstr "ई-मेल सूची"
+
+#, fuzzy
+#~| msgid "Your names"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "रविशंकर श्रीवास्तव, जी. करूणाकर"
+
+#, fuzzy
+#~| msgid "Your emails"
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "raviratlami@aol.in"
+
+#~ msgid "Unable to load resource '%1'"
+#~ msgstr "रिसोर्स  '%1'  लोड करने में अक्षम."
+
+#, fuzzy
+#~| msgid "Select Addressee"
+#~ msgctxt "@title:window"
+#~ msgid "Select Addressee"
+#~ msgstr "पाने वाला चुनें"
+
+#, fuzzy
+#~| msgid "Name"
+#~ msgctxt "@title:column addressee name"
+#~ msgid "Name"
+#~ msgstr "नाम"
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgctxt "@title:column addressee email"
+#~ msgid "Email"
+#~ msgstr "ईमेल"
+
+#, fuzzy
+#~| msgid "Selected"
+#~ msgctxt "@title:group selected addressees"
+#~ msgid "Selected"
+#~ msgstr "चुना गया"
+
+#, fuzzy
+#~| msgid "Unselect"
+#~ msgctxt "@action:button unselect addressee"
+#~ msgid "Unselect"
+#~ msgstr "अचयनित"
+
+#~ msgid "Configure Distribution Lists"
+#~ msgstr "वितरण सूचियाँ कॉन्फ़िगर  करें"
+
+#~ msgid "Select Email Address"
+#~ msgstr "ई-मेल पता चुनें"
+
+#~ msgid "Email Addresses"
+#~ msgstr "ईमेल पता"
+
+#, fuzzy
+#~| msgid "Yes"
+#~ msgctxt "this the preferred email address"
+#~ msgid "Yes"
+#~ msgstr "हाँ"
+
+#, fuzzy
+#~| msgid "No"
+#~ msgctxt "this is not the preferred email address"
+#~ msgid "No"
+#~ msgstr "नहीं"
+
+#~ msgid "New List..."
+#~ msgstr "नई सूची..."
+
+#~ msgid "Rename List..."
+#~ msgstr "सूची का नया नाम..."
+
+#~ msgid "Remove List"
+#~ msgstr "सूची मिटाएँ"
+
+#~ msgid "Available addresses:"
+#~ msgstr "उपलब्ध पताः"
+
+#, fuzzy
+#~| msgid "Preferred Email"
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Preferred Email"
+#~ msgstr "प्राथमिकता ईमेल "
+
+#~ msgid "Add Entry"
+#~ msgstr "एन्ट्री जोड़ें"
+
+#, fuzzy
+#~| msgid "Email"
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Email"
+#~ msgstr "ईमेल"
+
+#, fuzzy
+#~| msgid "Use Preferred"
+#~ msgctxt "@title:column use preferred email"
+#~ msgid "Use Preferred"
+#~ msgstr "पसंदीदा इस्तेमाल करें"
+
+#~ msgid "Change Email..."
+#~ msgstr "ईमेल बदलें..."
+
+#~ msgid "Remove Entry"
+#~ msgstr "एन्ट्री हटाएँ"
+
+#~ msgid "New Distribution List"
+#~ msgstr "नई वितरण सूची"
+
+#~ msgid "Please enter &name:"
+#~ msgstr "कृपया नाम भरें (&n):"
+
+#~ msgid "Distribution List"
+#~ msgstr "वितरण सूची"
+
+#~ msgid "Please change &name:"
+#~ msgstr "कृपया नाम बदलें (&n):"
+
+#~ msgid "Delete distribution list '%1'?"
+#~ msgstr "वितरण सूची '%1' हटाएँ?"
+
+#~ msgid "Selected addressees:"
+#~ msgstr "चुने हुए पतेः"
+
+#~ msgid "Selected addresses in '%1':"
+#~ msgstr " '%1' में चुने हुए पते:"
+
+#, fuzzy
+#~| msgid "No"
+#~ msgctxt "this is not preferred email address"
+#~ msgid "No"
+#~ msgstr "नहीं"
+
+#~ msgid "vCard"
+#~ msgstr "वीकार्ड "
+
+#~ msgid "vCard Format"
+#~ msgstr "वीकार्ड फॉर्मेट"
+
+#~ msgid "No description available."
+#~ msgstr "कोई वर्णन उपलब्ध नहीं"
+
+#~ msgid "Unable to open lock file."
+#~ msgstr "लाक फ़ाइल खोलने में अक्षम."
+
+#~ msgid "The resource '%1' is locked by application '%2'."
+#~ msgstr "रिसोर्स '%1' अनुप्रयोग '%2' द्वारा तालाबंद है."
+
+#~ msgid "Error"
+#~ msgstr "त्रुटि"
+
+#~ msgid "Unlock failed. Lock file is owned by other process: %1 (%2)"
+#~ msgstr "ताला खोलने में असफल. लाक फ़ाइल अन्य प्रक्रम के स्वामित्व में है: %1 (%2)"
+
+#~ msgid "LockNull: All locks succeed but no actual locking is done."
+#~ msgstr "LockNull: सभी तालाबंद सफल किंतु वास्तविक ताला नहीं लगाया."
+
+#~ msgid "LockNull: All locks fail."
+#~ msgstr "LockNull: सभी ताला असफल."
+
+#~ msgid "Loading resource '%1' failed."
+#~ msgstr "संसाधन '%1' लोड करना असफल."
+
+#~ msgid "Saving resource '%1' failed."
+#~ msgstr "संसाधन '%1' सहेना असफल."
+
+#, fuzzy
+#~| msgid "Unable to load resource '%1'"
+#~ msgid "Unable to open resource '%1'."
+#~ msgstr "रिसोर्स  '%1'  लोड करने में अक्षम."
+
+#, fuzzy
+#~| msgid "Select Addressee"
+#~ msgid "Default Address Book"
+#~ msgstr "पाने वाला चुनें"
+
+#~ msgid "Unable to save to resource '%1'. It is locked."
+#~ msgstr "संसाधन '%1' पर सहेजने में अक्षम. यह ताला बंद है."

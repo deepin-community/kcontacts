@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kabc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-24 00:14+0000\n"
+"POT-Creation-Date: 2022-02-27 00:41+0000\n"
 "PO-Revision-Date: 2019-01-19 15:09+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -25,88 +25,88 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: address.cpp:377
+#: address.cpp:223
 #, kde-format
 msgid "Post Office Box"
 msgstr "Абонентский ящик"
 
-#: address.cpp:393
+#: address.cpp:239
 #, kde-format
 msgid "Extended Address Information"
 msgstr "Расширенная информация об адресе"
 
-#: address.cpp:409
+#: address.cpp:255
 #, kde-format
 msgid "Street"
 msgstr "Улица"
 
-#: address.cpp:425
+#: address.cpp:271
 #, kde-format
 msgid "Locality"
 msgstr "Населённый пункт"
 
-#: address.cpp:441
+#: address.cpp:287
 #, kde-format
 msgid "Region"
 msgstr "Область"
 
-#: address.cpp:457
+#: address.cpp:303
 #, kde-format
 msgid "Postal Code"
 msgstr "Почтовый индекс"
 
-#: address.cpp:473
+#: address.cpp:319
 #, kde-format
 msgid "Country"
 msgstr "Страна"
 
-#: address.cpp:489
+#: address.cpp:335
 #, kde-format
 msgid "Delivery Label"
 msgstr "Наклейка на конверт"
 
-#: address.cpp:507
+#: address.cpp:353
 #, kde-format
 msgctxt "Address is in home country"
 msgid "Domestic"
 msgstr "Адрес внутри страны"
 
-#: address.cpp:509
+#: address.cpp:355
 #, kde-format
 msgctxt "Address is not in home country"
 msgid "International"
 msgstr "Международный адрес"
 
-#: address.cpp:511
+#: address.cpp:357
 #, kde-format
 msgctxt "Address for delivering letters"
 msgid "Postal"
 msgstr "Адрес для корреспонденции"
 
-#: address.cpp:513
+#: address.cpp:359
 #, kde-format
 msgctxt "Address for delivering packages"
 msgid "Parcel"
 msgstr "Адрес для посылок"
 
-#: address.cpp:515
+#: address.cpp:361
 #, kde-format
 msgctxt "Home Address"
 msgid "Home"
 msgstr "Домашний адрес"
 
-#: address.cpp:517
+#: address.cpp:363
 #, kde-format
 msgctxt "Work Address"
 msgid "Work"
 msgstr "Служебный адрес"
 
-#: address.cpp:519
+#: address.cpp:365
 #, kde-format
 msgid "Preferred Address"
 msgstr "Основной адрес"
 
-#: address.cpp:521
+#: address.cpp:367
 #, kde-format
 msgctxt "another type of address"
 msgid "Other"
@@ -590,3 +590,162 @@ msgstr "Конфиденциальный доступ"
 msgctxt "unknown secrecy type"
 msgid "Unknown type"
 msgstr "Неизвестный доступ"
+
+#~ msgctxt "Preferred address"
+#~ msgid "Preferred"
+#~ msgstr "Основной адрес"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Чуплыгин Сергей, Николай Шафоростов"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "chapay_s@list.ru, shaforostoff@kde.ru"
+
+#~ msgid "Unable to load resource '%1'"
+#~ msgstr "Невозможно открыть источник «%1»"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Addressee"
+#~ msgstr "Выбор адресата"
+
+#~ msgctxt "@title:column addressee name"
+#~ msgid "Name"
+#~ msgstr "Имя"
+
+#~ msgctxt "@title:column addressee email"
+#~ msgid "Email"
+#~ msgstr "Адрес электронной почты"
+
+#~ msgctxt "@title:group selected addressees"
+#~ msgid "Selected"
+#~ msgstr "Выбрано"
+
+#~ msgctxt "@action:button unselect addressee"
+#~ msgid "Unselect"
+#~ msgstr "Отменить выбор"
+
+#~ msgid "Configure Distribution Lists"
+#~ msgstr "Настройка списков рассылки"
+
+#~ msgid "Select Email Address"
+#~ msgstr "Выбор адресов электронной почты"
+
+#~ msgid "Email Addresses"
+#~ msgstr "Адреса электронной почты"
+
+#~ msgctxt "this the preferred email address"
+#~ msgid "Yes"
+#~ msgstr "Да"
+
+#~ msgctxt "this is not the preferred email address"
+#~ msgid "No"
+#~ msgstr "Нет"
+
+#~ msgid "New List..."
+#~ msgstr "Новый список..."
+
+#~ msgid "Rename List..."
+#~ msgstr "Переименовать список..."
+
+#~ msgid "Remove List"
+#~ msgstr "Удалить список..."
+
+#~ msgid "Available addresses:"
+#~ msgstr "Доступные адреса:"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Preferred Email"
+#~ msgstr "Основной адрес"
+
+#~ msgid "Add Entry"
+#~ msgstr "Добавить адрес"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Email"
+#~ msgstr "Адрес электронной почты"
+
+#~ msgctxt "@title:column use preferred email"
+#~ msgid "Use Preferred"
+#~ msgstr "Использовать основной"
+
+#~ msgid "Change Email..."
+#~ msgstr "Изменить адрес..."
+
+#~ msgid "Remove Entry"
+#~ msgstr "Удалить адрес"
+
+#~ msgid "New Distribution List"
+#~ msgstr "Новый список рассылки"
+
+#~ msgid "Please enter &name:"
+#~ msgstr "Введите &имя:"
+
+#~ msgid "Distribution List"
+#~ msgstr "Список рассылки"
+
+#~ msgid "Please change &name:"
+#~ msgstr "Измените &имя:"
+
+#~ msgid "Delete distribution list '%1'?"
+#~ msgstr "Удалить список рассылки «%1»?"
+
+#~ msgid "Selected addressees:"
+#~ msgstr "Выбранные адреса:"
+
+#~ msgid "Selected addresses in '%1':"
+#~ msgstr "Выбранные адреса в «%1»:"
+
+#~ msgctxt "this is not preferred email address"
+#~ msgid "No"
+#~ msgstr "Не основной"
+
+#~ msgid "vCard"
+#~ msgstr "vCard"
+
+#~ msgid "vCard Format"
+#~ msgstr "Формат vCard"
+
+#~ msgid "No description available."
+#~ msgstr "Описание отсутствует."
+
+#~ msgid "Unable to open lock file."
+#~ msgstr "Невозможно открыть файл блокировки."
+
+#~ msgid "The resource '%1' is locked by application '%2'."
+#~ msgstr "Источник «%1» заблокирован приложением «%2»."
+
+#~ msgid "Error"
+#~ msgstr "Ошибка"
+
+#~ msgid "Unlock failed. Lock file is owned by other process: %1 (%2)"
+#~ msgstr ""
+#~ "Ошибка разблокирования. Файл блокировки принадлежит другому процессу: %1 "
+#~ "(%2)"
+
+#~ msgid "LockNull: All locks succeed but no actual locking is done."
+#~ msgstr ""
+#~ "LockNull: все операции блокировки выполнены успешно, но никаких "
+#~ "блокировок не установлено."
+
+#~ msgid "LockNull: All locks fail."
+#~ msgstr "LockNull: блокировки не выполнены."
+
+#~ msgid "Loading resource '%1' failed."
+#~ msgstr "Невозможно открыть источник «%1»."
+
+#~ msgid "Saving resource '%1' failed."
+#~ msgstr "Невозможно сохранить в источнике «%1»."
+
+#~ msgid "Unable to open resource '%1'."
+#~ msgstr "Не удалось открыть источник «%1»."
+
+#~ msgid "Default Address Book"
+#~ msgstr "Адресная книга по умолчанию"
+
+#~ msgid "Unable to save to resource '%1'. It is locked."
+#~ msgstr "Невозможно сохранить в источнике «%1»: источник заблокирован."
+
+#~ msgid "List of Emails"
+#~ msgstr "Список адресов"
