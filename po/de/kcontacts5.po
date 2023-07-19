@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kabc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-24 00:14+0000\n"
+"POT-Creation-Date: 2022-02-27 00:41+0000\n"
 "PO-Revision-Date: 2021-05-14 13:24+0200\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -16,88 +16,88 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: address.cpp:377
+#: address.cpp:223
 #, kde-format
 msgid "Post Office Box"
 msgstr "Postfach"
 
-#: address.cpp:393
+#: address.cpp:239
 #, kde-format
 msgid "Extended Address Information"
 msgstr "Erweiterte Adressinformationen"
 
-#: address.cpp:409
+#: address.cpp:255
 #, kde-format
 msgid "Street"
 msgstr "Straße"
 
-#: address.cpp:425
+#: address.cpp:271
 #, kde-format
 msgid "Locality"
 msgstr "Ort"
 
-#: address.cpp:441
+#: address.cpp:287
 #, kde-format
 msgid "Region"
 msgstr "Region"
 
-#: address.cpp:457
+#: address.cpp:303
 #, kde-format
 msgid "Postal Code"
 msgstr "Postleitzahl"
 
-#: address.cpp:473
+#: address.cpp:319
 #, kde-format
 msgid "Country"
 msgstr "Land"
 
-#: address.cpp:489
+#: address.cpp:335
 #, kde-format
 msgid "Delivery Label"
 msgstr "Adressaufkleber"
 
-#: address.cpp:507
+#: address.cpp:353
 #, kde-format
 msgctxt "Address is in home country"
 msgid "Domestic"
 msgstr "Inland"
 
-#: address.cpp:509
+#: address.cpp:355
 #, kde-format
 msgctxt "Address is not in home country"
 msgid "International"
 msgstr "International"
 
-#: address.cpp:511
+#: address.cpp:357
 #, kde-format
 msgctxt "Address for delivering letters"
 msgid "Postal"
 msgstr "Postanschrift"
 
-#: address.cpp:513
+#: address.cpp:359
 #, kde-format
 msgctxt "Address for delivering packages"
 msgid "Parcel"
 msgstr "Paketanschrift"
 
-#: address.cpp:515
+#: address.cpp:361
 #, kde-format
 msgctxt "Home Address"
 msgid "Home"
 msgstr "Privat"
 
-#: address.cpp:517
+#: address.cpp:363
 #, kde-format
 msgctxt "Work Address"
 msgid "Work"
 msgstr "Dienstlich"
 
-#: address.cpp:519
+#: address.cpp:365
 #, kde-format
 msgid "Preferred Address"
 msgstr "Bevorzugte Adresse"
 
-#: address.cpp:521
+#: address.cpp:367
 #, kde-format
 msgctxt "another type of address"
 msgid "Other"
@@ -581,3 +581,163 @@ msgstr "Vertraulich"
 msgctxt "unknown secrecy type"
 msgid "Unknown type"
 msgstr "Unbekannter Typ"
+
+#~ msgctxt "Preferred address"
+#~ msgid "Preferred"
+#~ msgstr "Bevorzugte"
+
+#~ msgid "List of Emails"
+#~ msgstr "E-Mail-Liste"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Stephan Johach"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "hunsum@gmx.de"
+
+#~ msgid "Unable to load resource '%1'"
+#~ msgstr "Die Ressource „%1“ kann nicht geladen werden"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Addressee"
+#~ msgstr "Empfänger auswählen"
+
+#~ msgctxt "@title:column addressee name"
+#~ msgid "Name"
+#~ msgstr "Name"
+
+#~ msgctxt "@title:column addressee email"
+#~ msgid "Email"
+#~ msgstr "E-Mail-Adresse"
+
+#~ msgctxt "@title:group selected addressees"
+#~ msgid "Selected"
+#~ msgstr "Ausgewählt"
+
+#~ msgctxt "@action:button unselect addressee"
+#~ msgid "Unselect"
+#~ msgstr "Auswahl aufheben"
+
+#~ msgid "Configure Distribution Lists"
+#~ msgstr "Verteilerlisten einrichten"
+
+#~ msgid "Select Email Address"
+#~ msgstr "E-Mail-Adresse auswählen"
+
+#~ msgid "Email Addresses"
+#~ msgstr "E-Mail-Adressen"
+
+#~ msgctxt "this the preferred email address"
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgctxt "this is not the preferred email address"
+#~ msgid "No"
+#~ msgstr "Nein"
+
+#~ msgid "New List..."
+#~ msgstr "Neue Liste ..."
+
+#~ msgid "Rename List..."
+#~ msgstr "Liste umbenennen ..."
+
+#~ msgid "Remove List"
+#~ msgstr "Liste löschen"
+
+#~ msgid "Available addresses:"
+#~ msgstr "Verfügbare Adressen:"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Preferred Email"
+#~ msgstr "Bevorzugte E-Mail-Adresse"
+
+#~ msgid "Add Entry"
+#~ msgstr "Eintrag hinzufügen"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Email"
+#~ msgstr "E-Mail-Adresse"
+
+#~ msgctxt "@title:column use preferred email"
+#~ msgid "Use Preferred"
+#~ msgstr "Bevorzugte verwenden"
+
+#~ msgid "Change Email..."
+#~ msgstr "E-Mail bearbeiten ..."
+
+#~ msgid "Remove Entry"
+#~ msgstr "Eintrag löschen"
+
+#~ msgid "New Distribution List"
+#~ msgstr "Neue Verteilerliste"
+
+#~ msgid "Please enter &name:"
+#~ msgstr "&Name:"
+
+#~ msgid "Distribution List"
+#~ msgstr "Verteilerliste"
+
+#~ msgid "Please change &name:"
+#~ msgstr "&Namen ändern:"
+
+#~ msgid "Delete distribution list '%1'?"
+#~ msgstr "Möchten Sie die Verteilerliste „%1“ löschen?"
+
+#~ msgid "Selected addressees:"
+#~ msgstr "Ausgewählte Empfänger:"
+
+#~ msgid "Selected addresses in '%1':"
+#~ msgstr "Ausgewählte Empfänger in „%1“:"
+
+#~ msgctxt "this is not preferred email address"
+#~ msgid "No"
+#~ msgstr "Nein"
+
+#~ msgid "vCard"
+#~ msgstr "vCard"
+
+#~ msgid "vCard Format"
+#~ msgstr "vCard-Format"
+
+#~ msgid "No description available."
+#~ msgstr "Keine Beschreibung verfügbar."
+
+#~ msgid "Unable to open lock file."
+#~ msgstr "Die Sperrdatei kann nicht geöffnet werden."
+
+#~ msgid "The resource '%1' is locked by application '%2'."
+#~ msgstr "Die Ressource „%1“ ist von der Anwendung „%2“ gesperrt."
+
+#~ msgid "Error"
+#~ msgstr "Fehler"
+
+#~ msgid "Unlock failed. Lock file is owned by other process: %1 (%2)"
+#~ msgstr ""
+#~ "Das Entsperren ist fehlgeschlagen. Die Sperrdatei gehört zu einem anderen "
+#~ "Prozess: %1 (%2)"
+
+#~ msgid "LockNull: All locks succeed but no actual locking is done."
+#~ msgstr ""
+#~ "LockNull: Alle Sperren waren erfolgreich, es wurde aber keine echte "
+#~ "Sperrung durchgeführt."
+
+#~ msgid "LockNull: All locks fail."
+#~ msgstr "LockNull: Alle Sperren sind fehlgeschlagen."
+
+#~ msgid "Loading resource '%1' failed."
+#~ msgstr "Das Laden der Ressource „%1“ ist fehlgeschlagen."
+
+#~ msgid "Saving resource '%1' failed."
+#~ msgstr "Das Speichern der Ressource „%1“ ist fehlgeschlagen."
+
+#~ msgid "Unable to open resource '%1'."
+#~ msgstr "Die Ressource „%1“ kann nicht geöffnet werden"
+
+#~ msgid "Default Address Book"
+#~ msgstr "Standard-Adressbuch"
+
+#~ msgid "Unable to save to resource '%1'. It is locked."
+#~ msgstr ""
+#~ "Die Ressource „%1“ kann nicht gespeichert werden, da sie gesperrt ist."

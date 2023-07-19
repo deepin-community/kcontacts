@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcontacts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-24 00:14+0000\n"
+"POT-Creation-Date: 2022-02-27 00:41+0000\n"
 "PO-Revision-Date: 2017-12-29 18:45+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -23,88 +23,88 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
-#: address.cpp:377
+#: address.cpp:223
 #, kde-format
 msgid "Post Office Box"
 msgstr "Apartat de correus"
 
-#: address.cpp:393
+#: address.cpp:239
 #, kde-format
 msgid "Extended Address Information"
 msgstr "Informació ampliada de l'adreça"
 
-#: address.cpp:409
+#: address.cpp:255
 #, kde-format
 msgid "Street"
 msgstr "Carrer"
 
-#: address.cpp:425
+#: address.cpp:271
 #, kde-format
 msgid "Locality"
 msgstr "Localitat"
 
-#: address.cpp:441
+#: address.cpp:287
 #, kde-format
 msgid "Region"
 msgstr "Província"
 
-#: address.cpp:457
+#: address.cpp:303
 #, kde-format
 msgid "Postal Code"
 msgstr "Codi postal"
 
-#: address.cpp:473
+#: address.cpp:319
 #, kde-format
 msgid "Country"
 msgstr "País"
 
-#: address.cpp:489
+#: address.cpp:335
 #, kde-format
 msgid "Delivery Label"
 msgstr "Etiqueta de lliurament"
 
-#: address.cpp:507
+#: address.cpp:353
 #, kde-format
 msgctxt "Address is in home country"
 msgid "Domestic"
 msgstr "Nacional"
 
-#: address.cpp:509
+#: address.cpp:355
 #, kde-format
 msgctxt "Address is not in home country"
 msgid "International"
 msgstr "Internacional"
 
-#: address.cpp:511
+#: address.cpp:357
 #, kde-format
 msgctxt "Address for delivering letters"
 msgid "Postal"
 msgstr "Postal"
 
-#: address.cpp:513
+#: address.cpp:359
 #, kde-format
 msgctxt "Address for delivering packages"
 msgid "Parcel"
 msgstr "Paquets postals"
 
-#: address.cpp:515
+#: address.cpp:361
 #, kde-format
 msgctxt "Home Address"
 msgid "Home"
 msgstr "Llar"
 
-#: address.cpp:517
+#: address.cpp:363
 #, kde-format
 msgctxt "Work Address"
 msgid "Work"
 msgstr "Feina"
 
-#: address.cpp:519
+#: address.cpp:365
 #, kde-format
 msgid "Preferred Address"
 msgstr "Adreça preferida"
 
-#: address.cpp:521
+#: address.cpp:367
 #, kde-format
 msgctxt "another type of address"
 msgid "Other"
@@ -588,3 +588,154 @@ msgstr "Confidencial"
 msgctxt "unknown secrecy type"
 msgid "Unknown type"
 msgstr "Tipus desconegut"
+
+#~ msgctxt "Preferred address"
+#~ msgid "Preferred"
+#~ msgstr "Preferida"
+
+#~ msgid "List of Emails"
+#~ msgstr "Llista d'adreces electròniques"
+
+#~ msgid "Unable to load resource '%1'"
+#~ msgstr "No s'ha pogut carregar el recurs «%1»"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Addressee"
+#~ msgstr "Selecció del destinatari"
+
+#~ msgctxt "@title:column addressee name"
+#~ msgid "Name"
+#~ msgstr "Nom"
+
+#~ msgctxt "@title:column addressee email"
+#~ msgid "Email"
+#~ msgstr "Adreça electrònica"
+
+#~ msgctxt "@title:group selected addressees"
+#~ msgid "Selected"
+#~ msgstr "Selecciona"
+
+#~ msgctxt "@action:button unselect addressee"
+#~ msgid "Unselect"
+#~ msgstr "Desselecciona"
+
+#~ msgid "Configure Distribution Lists"
+#~ msgstr "Configuració de les llistes de distribució"
+
+#~ msgid "Select Email Address"
+#~ msgstr "Selecció de l'adreça de correu electrònic"
+
+#~ msgid "Email Addresses"
+#~ msgstr "Adreces de correu electrònic"
+
+#~ msgctxt "this the preferred email address"
+#~ msgid "Yes"
+#~ msgstr "Sí"
+
+#~ msgctxt "this is not the preferred email address"
+#~ msgid "No"
+#~ msgstr "No"
+
+#~ msgid "New List..."
+#~ msgstr "Llista nova..."
+
+#~ msgid "Rename List..."
+#~ msgstr "Reanomena una llista..."
+
+#~ msgid "Remove List"
+#~ msgstr "Suprimeix la llista"
+
+#~ msgid "Available addresses:"
+#~ msgstr "Adreces disponibles:"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Preferred Email"
+#~ msgstr "Adreça electrònica preferida"
+
+#~ msgid "Add Entry"
+#~ msgstr "Afegeix una entrada"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Email"
+#~ msgstr "Adreça electrònica"
+
+#~ msgctxt "@title:column use preferred email"
+#~ msgid "Use Preferred"
+#~ msgstr "Usa la preferida"
+
+#~ msgid "Change Email..."
+#~ msgstr "Canvia l'adreça de correu..."
+
+#~ msgid "Remove Entry"
+#~ msgstr "Suprimeix una entrada"
+
+#~ msgid "New Distribution List"
+#~ msgstr "Llista de distribució nova"
+
+#~ msgid "Please enter &name:"
+#~ msgstr "Introduïu el &nom:"
+
+#~ msgid "Distribution List"
+#~ msgstr "Llista de distribució"
+
+#~ msgid "Please change &name:"
+#~ msgstr "Canvieu el &nom:"
+
+#~ msgid "Delete distribution list '%1'?"
+#~ msgstr "Suprimeixo la llista de distribució «%1»?"
+
+#~ msgid "Selected addressees:"
+#~ msgstr "Destinatari seleccionat:"
+
+#~ msgid "Selected addresses in '%1':"
+#~ msgstr "Adreces seleccionades en «%1»:"
+
+#~ msgctxt "this is not preferred email address"
+#~ msgid "No"
+#~ msgstr "No"
+
+#~ msgid "vCard"
+#~ msgstr "vCard"
+
+#~ msgid "vCard Format"
+#~ msgstr "Format vCard"
+
+#~ msgid "No description available."
+#~ msgstr "No hi ha disponible cap descripció."
+
+#~ msgid "Unable to open lock file."
+#~ msgstr "No s'ha pogut obrir el fitxer de bloqueig."
+
+#~ msgid "The resource '%1' is locked by application '%2'."
+#~ msgstr "El recurs «%1» està bloquejat per l'aplicació «%2»."
+
+#~ msgid "Error"
+#~ msgstr "Error"
+
+#~ msgid "Unlock failed. Lock file is owned by other process: %1 (%2)"
+#~ msgstr ""
+#~ "El desbloqueig ha fallat. Un altre procés té el fitxer de bloqueig: %1 "
+#~ "(%2)"
+
+#~ msgid "LockNull: All locks succeed but no actual locking is done."
+#~ msgstr ""
+#~ "LockNull: tots els bloqueigs han funcionat, però no s'ha fet cap bloqueig "
+#~ "real."
+
+#~ msgid "LockNull: All locks fail."
+#~ msgstr "LockNull: tots els bloqueigs han fallat."
+
+#~ msgid "Loading resource '%1' failed."
+#~ msgstr "La càrrega del recurs «%1» ha fallat."
+
+#~ msgid "Saving resource '%1' failed."
+#~ msgstr "El desament del recurs «%1» ha fallat."
+
+#~ msgid "Unable to open resource '%1'."
+#~ msgstr "No s'ha pogut obrir el recurs «%1»."
+
+#~ msgid "Default Address Book"
+#~ msgstr "Llibreta d'adreces per omissió"
+
+#~ msgid "Unable to save to resource '%1'. It is locked."
+#~ msgstr "No s'ha pogut desar en el recurs «%1». Està bloquejat."

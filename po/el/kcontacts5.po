@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kabc\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-10-24 00:14+0000\n"
+"POT-Creation-Date: 2022-02-27 00:41+0000\n"
 "PO-Revision-Date: 2020-09-07 14:02+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -21,88 +21,88 @@ msgstr ""
 "X-Generator: Lokalize 20.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: address.cpp:377
+#: address.cpp:223
 #, kde-format
 msgid "Post Office Box"
 msgstr "Ταχυδρομική θυρίδα"
 
-#: address.cpp:393
+#: address.cpp:239
 #, kde-format
 msgid "Extended Address Information"
 msgstr "Εκτεταμένες πληροφορίες διεύθυνσης"
 
-#: address.cpp:409
+#: address.cpp:255
 #, kde-format
 msgid "Street"
 msgstr "Οδός"
 
-#: address.cpp:425
+#: address.cpp:271
 #, kde-format
 msgid "Locality"
 msgstr "Δήμος/Πόλη"
 
-#: address.cpp:441
+#: address.cpp:287
 #, kde-format
 msgid "Region"
 msgstr "Νομός/Περιφέρεια"
 
-#: address.cpp:457
+#: address.cpp:303
 #, kde-format
 msgid "Postal Code"
 msgstr "Ταχυδρομικός κώδικας"
 
-#: address.cpp:473
+#: address.cpp:319
 #, kde-format
 msgid "Country"
 msgstr "Χώρα"
 
-#: address.cpp:489
+#: address.cpp:335
 #, kde-format
 msgid "Delivery Label"
 msgstr "Ετικέτα παράδοσης"
 
-#: address.cpp:507
+#: address.cpp:353
 #, kde-format
 msgctxt "Address is in home country"
 msgid "Domestic"
 msgstr "Εγχώρια"
 
-#: address.cpp:509
+#: address.cpp:355
 #, kde-format
 msgctxt "Address is not in home country"
 msgid "International"
 msgstr "Διεθνής"
 
-#: address.cpp:511
+#: address.cpp:357
 #, kde-format
 msgctxt "Address for delivering letters"
 msgid "Postal"
 msgstr "Ταχυδρομική"
 
-#: address.cpp:513
+#: address.cpp:359
 #, kde-format
 msgctxt "Address for delivering packages"
 msgid "Parcel"
 msgstr "Δεμάτων"
 
-#: address.cpp:515
+#: address.cpp:361
 #, kde-format
 msgctxt "Home Address"
 msgid "Home"
 msgstr "Οικία"
 
-#: address.cpp:517
+#: address.cpp:363
 #, kde-format
 msgctxt "Work Address"
 msgid "Work"
 msgstr "Εργασία"
 
-#: address.cpp:519
+#: address.cpp:365
 #, kde-format
 msgid "Preferred Address"
 msgstr "Προτιμώμενη διεύθυνση"
 
-#: address.cpp:521
+#: address.cpp:367
 #, kde-format
 msgctxt "another type of address"
 msgid "Other"
@@ -586,3 +586,162 @@ msgstr "Εμπιστευτικό"
 msgctxt "unknown secrecy type"
 msgid "Unknown type"
 msgstr "Άγνωστος τύπος"
+
+#~ msgctxt "Preferred address"
+#~ msgid "Preferred"
+#~ msgstr "Προτεινόμενο"
+
+#~ msgid "List of Emails"
+#~ msgstr "Λίστα διευθύνσεων ηλ. αλληλογραφίας"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Σπύρος Γεωργαράς, Τούσης Μανώλης"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sng@hellug.gr, manolis@koppermind.homelinux.org"
+
+#~ msgid "Unable to load resource '%1'"
+#~ msgstr "Δεν είναι δυνατή η φόρτωση του πόρου '%1'"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Addressee"
+#~ msgstr "Επιλέξτε παραλήπτη"
+
+#~ msgctxt "@title:column addressee name"
+#~ msgid "Name"
+#~ msgstr "Όνομα"
+
+#~ msgctxt "@title:column addressee email"
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgctxt "@title:group selected addressees"
+#~ msgid "Selected"
+#~ msgstr "Επιλεγμένο"
+
+#~ msgctxt "@action:button unselect addressee"
+#~ msgid "Unselect"
+#~ msgstr "Αποεπιλογή"
+
+#~ msgid "Configure Distribution Lists"
+#~ msgstr "Ρύθμιση λιστών διανομής"
+
+#~ msgid "Select Email Address"
+#~ msgstr "Επιλέξτε διεύθυνση ηλ. αλληλογραφίας"
+
+#~ msgid "Email Addresses"
+#~ msgstr "Διευθύνσεις ηλ. αλληλογραφίας"
+
+#~ msgctxt "this the preferred email address"
+#~ msgid "Yes"
+#~ msgstr "Ναι"
+
+#~ msgctxt "this is not the preferred email address"
+#~ msgid "No"
+#~ msgstr "Όχι"
+
+#~ msgid "New List..."
+#~ msgstr "Νέα λίστα..."
+
+#~ msgid "Rename List..."
+#~ msgstr "Μετονομασία λίστας..."
+
+#~ msgid "Remove List"
+#~ msgstr "Αφαίρεση λίστας"
+
+#~ msgid "Available addresses:"
+#~ msgstr "Διαθέσιμες διευθύνσεις:"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Preferred Email"
+#~ msgstr "Προτιμώμενη ηλ. αλληλογραφία"
+
+#~ msgid "Add Entry"
+#~ msgstr "Προσθήκη καταχώρησης"
+
+#~ msgctxt "@title:column addressee preferred email"
+#~ msgid "Email"
+#~ msgstr "Ηλ. αλληλογραφία"
+
+#~ msgctxt "@title:column use preferred email"
+#~ msgid "Use Preferred"
+#~ msgstr "Χρήση προτιμώμενου"
+
+#~ msgid "Change Email..."
+#~ msgstr "Αλλαγή ηλ. αλληλογραφίας..."
+
+#~ msgid "Remove Entry"
+#~ msgstr "Αφαίρεση καταχώρησης"
+
+#~ msgid "New Distribution List"
+#~ msgstr "Νέα λίστα διανομής"
+
+#~ msgid "Please enter &name:"
+#~ msgstr "Παρακαλώ δώστε ό&νομα:"
+
+#~ msgid "Distribution List"
+#~ msgstr "Λίστα διανομής"
+
+#~ msgid "Please change &name:"
+#~ msgstr "Παρακαλώ αλλάξτε ό&νομα:"
+
+#~ msgid "Delete distribution list '%1'?"
+#~ msgstr "Διαγραφή της λίστας διανομής '%1';"
+
+#~ msgid "Selected addressees:"
+#~ msgstr "Επιλεγμένοι παραλήπτες:"
+
+#~ msgid "Selected addresses in '%1':"
+#~ msgstr "Επιλεγμένοι παραλήπτες στο '%1':"
+
+#~ msgctxt "this is not preferred email address"
+#~ msgid "No"
+#~ msgstr "Όχι"
+
+#~ msgid "vCard"
+#~ msgstr "vCard"
+
+#~ msgid "vCard Format"
+#~ msgstr "Μορφή vCard"
+
+#~ msgid "No description available."
+#~ msgstr "Περιγραφή μη διαθέσιμη."
+
+#~ msgid "Unable to open lock file."
+#~ msgstr "Δεν είναι δυνατό το άνοιγμα του αρχείου κλειδώματος."
+
+#~ msgid "The resource '%1' is locked by application '%2'."
+#~ msgstr "Ο πόρος '%1' είναι κλειδωμένος από την εφαρμογή '%2'."
+
+#~ msgid "Error"
+#~ msgstr "Σφάλμα"
+
+#~ msgid "Unlock failed. Lock file is owned by other process: %1 (%2)"
+#~ msgstr ""
+#~ "Το ξεκλείδωμα απέτυχε. Το αρχείο κλειδώματος ανήκει σε άλλη διεργασία: %1 "
+#~ "(%2)"
+
+#~ msgid "LockNull: All locks succeed but no actual locking is done."
+#~ msgstr ""
+#~ "LockNull: Όλα τα κλειδώματα πετυχαίνουν αλλά δε γίνεται πραγματικό "
+#~ "κλείδωμα."
+
+#~ msgid "LockNull: All locks fail."
+#~ msgstr "LockNull: Όλα τα κλειδώματα αποτυγχάνουν."
+
+#~ msgid "Loading resource '%1' failed."
+#~ msgstr "Η φόρτωση του πόρου '%1' απέτυχε."
+
+#~ msgid "Saving resource '%1' failed."
+#~ msgstr "Η αποθήκευση ßτου πόρου '%1' απέτυχε."
+
+#~ msgid "Unable to open resource '%1'."
+#~ msgstr "Αδύνατο το άνοιγμα του πόρου «%1»."
+
+#~ msgid "Default Address Book"
+#~ msgstr "Προκαθορισμένο βιβλίο διευθύνσεων"
+
+#~ msgid "Unable to save to resource '%1'. It is locked."
+#~ msgstr "Δεν είναι δυνατή η αποθήκευση στον πόρο '%1'. Είναι κλειδωμένος."

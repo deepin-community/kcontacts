@@ -2040,6 +2040,12 @@ void Addressee::removeAddress(const Address &address)
     }
 }
 
+void Addressee::setAddresses(const Address::List &addresses)
+{
+    d->mEmpty = false;
+    d->mAddresses = addresses;
+}
+
 Address Addressee::address(Address::Type type) const
 {
     Address address(type);
@@ -2710,6 +2716,11 @@ static QVector<T> fromVariantList(const QVariantList &v)
         return elem.value<T>();
     });
     return l;
+}
+
+void Addressee::setBirthdayProperty(const QDateTime &birthday) {
+    // The property setter cannot pass withTime, so we have to guess.
+    setBirthday(birthday, birthday.time().msecsSinceStartOfDay() != 0);
 }
 
 QVariantList Addressee::emailsVariant() const
